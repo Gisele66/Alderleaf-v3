@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Removal — Alderleaf</title>
+  <meta name="description" content="Professional tree removal on Haida Gwaii — safe take-down in limited spaces. Over 25 years in the industry.">
+  <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: { DEFAULT: '#1d7a20', dark: '#123208', light: '#a7c441' },
+            accent: '#ff9500',
+            slate: '#374151',
+            ink: '#1F2937',
+            cream: '#f9f9f9',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col bg-white antialiased service-page-removal">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-forest focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+
+  <header id="site-header">
+    <div class="site-container site-header-grid">
+      <a href="index.html" class="site-header-logo shrink-0" aria-label="Alderleaf home">
+        <img src="assets/images/logo/alderleaf-logo-color.png" alt="Alderleaf" class="site-logo" width="250" height="85">
+      </a>
+      <nav class="site-nav site-header-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <a href="services.html" class="nav-link nav-link-active">Services</a>
+          <div class="nav-dropdown-panel">
+            <div class="nav-dropdown-menu">
+              <a href="services.html" class="nav-dropdown-link">Services</a>
+              <a href="removal.html" class="nav-dropdown-link nav-dropdown-link-active">Tree Removal</a>
+              <a href="brushing-land-clearing.html" class="nav-dropdown-link">Brushing / Land Clearing</a>
+              <a href="pruning.html" class="nav-dropdown-link">Tree Pruning and Shrub Trimming</a>
+              <a href="chips.html" class="nav-dropdown-link">Firewood, Wood-Chipping & Mulch</a>
+              <a href="lawn-care.html" class="nav-dropdown-link">Lawn Care</a>
+              <a href="property-maintenance.html" class="nav-dropdown-link">Property Maintenance</a>
+              <a href="removal.html#assessment" class="nav-dropdown-link">Tree Assessments</a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+      <div class="site-header-actions">
+        <a href="quote.html" class="btn-header-cta">Request A Quote</a>
+      </div>
+      <button id="menu-toggle" type="button" class="site-header-menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+        <svg id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg id="menu-icon-close" class="is-hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu-panel" aria-label="Mobile navigation" hidden>
+      <ul class="mobile-menu-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="removal.html" class="mobile-nav-link-sub">Tree Removal</a></li>
+        <li><a href="brushing-land-clearing.html" class="mobile-nav-link-sub">Brushing / Land Clearing</a></li>
+        <li><a href="pruning.html" class="mobile-nav-link-sub">Tree Pruning and Shrub Trimming</a></li>
+        <li><a href="chips.html" class="mobile-nav-link-sub">Firewood, Wood-Chipping & Mulch</a></li>
+        <li><a href="lawn-care.html" class="mobile-nav-link-sub">Lawn Care</a></li>
+        <li><a href="property-maintenance.html" class="mobile-nav-link-sub">Property Maintenance</a></li>
+        <li><a href="removal.html#assessment" class="mobile-nav-link-sub">Tree Assessments</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+        <li class="mobile-menu-cta"><a href="quote.html" class="btn-header-cta">Request A Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-1">
+    <section class="page-hero">
+      <img src="assets/images/banner-1-truck.jpg" alt="" class="page-hero-bg" aria-hidden="true" loading="eager">
+      <div class="hero-overlay-home" aria-hidden="true"></div>
+      <div class="site-container page-hero-content">
+        <p class="hero-eyebrow">Over 25 Years in the industry</p>
+        <h1 class="hero-heading mt-3">Tree Removal</h1>
+        <p class="hero-lead">From impeding viewscapes to presenting a danger to existing structures, there are many reasons why it may become necessary to completely remove a tree before the end of its lifespan. We have professional experience in a wide-range of tree removal scenarios, with a proven record of safety.</p>
+        <div class="hero-actions">
+          <a href="quote.html" class="btn-hero-primary">Request a Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-py-inner">
+      <div class="site-container service-section-grid">
+        <div class="service-section-copy">
+          <h2 class="section-heading">Tree Removal</h2>
+          <div class="section-divider mt-5"></div>
+          <p class="mt-6">We specialize in the take-down, removal and cleanup of trees when there is limited space and danger to structures or other landscaping. We are equipped with specialized, heavy rigging which allows us to safely cut up and lower limbs and stem pieces in a controlled manner with consideration and protection for your property below. Fully insured and committed to safety, you can enjoy peace-of-mind when Alderleaf is on the job for your tree removal.</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/images/IMG_5866.jpg" alt="Tree removal work" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream section-py-inner">
+      <div class="site-container service-section-grid">
+        <div class="photo-card">
+          <img src="assets/images/IMG_1966.jpg" alt="Clean-up after tree removal" loading="lazy">
+        </div>
+        <div class="service-section-copy">
+          <h2 class="section-heading">Moving Materials &amp; Clean-up</h2>
+          <div class="section-divider mt-5"></div>
+          <p class="mt-6">Often getting the tree on the ground is not half of the job and it is the clean-up where the work begins. We have the experience and tools to make light work of a big job and pride ourselves in leaving a work-site in a more tidy state than when we arrived.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="assessment" class="section-py-inner">
+      <div class="site-container service-section-grid">
+        <div class="service-section-copy">
+          <h2 class="section-heading">Tree Assessments</h2>
+          <div class="section-divider mt-5"></div>
+          <p class="mt-6">Professional assessment of trees by Certified Danger-Tree Assessor with decades of local experience.</p>
+        </div>
+        <div class="photo-card">
+          <img src="assets/images/20221006_093805.jpg" alt="Tree assessment" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="service-page-cta bg-cream">
+      <div class="site-container service-page-cta-inner">
+        <p class="service-page-cta-text leading-relaxed">Fully insured and committed to safety, you can enjoy peace-of-mind when Alderleaf is on the job.</p>
+        <a href="quote.html" class="btn-contact-quote">Request a Free Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer-separator" aria-hidden="true"></div>
+
+  <footer id="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo/alderleaf-logo-white.png" alt="Alderleaf" class="footer-logo" width="200" height="58">
+          <p class="footer-tagline"><strong>"When experience matters!"</strong></p>
+        </div>
+        <nav aria-label="Contact details" class="footer-nav footer-nav-center">
+          <ul>
+            <li><a href="tel:12505578733">1-250-557-TREE (8733)</a></li>
+            <li><a href="tel:12508580525">250-858-0525 (Cell)</a></li>
+            <li><a href="mailto:office@alderleaf.ca">office@alderleaf.ca</a></li>
+            <li>Box 163, Port Clements, BC, V0T-1R0</li>
+          </ul>
+        </nav>
+        <nav aria-label="Company" class="footer-nav footer-nav-end">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>© Copyright 2026 | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

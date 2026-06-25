@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Free Quote — Alderleaf</title>
+  <meta name="description" content="Request a free quote from Alderleaf Land and Tree Services on Haida Gwaii.">
+  <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: { DEFAULT: '#1d7a20', dark: '#123208', light: '#a7c441' },
+            accent: '#ff9500',
+            slate: '#374151',
+            ink: '#1F2937',
+            cream: '#f9f9f9',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col bg-white antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-forest focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+
+  <header id="site-header">
+    <div class="site-container site-header-grid">
+      <a href="index.html" class="site-header-logo shrink-0" aria-label="Alderleaf home">
+        <img src="assets/images/logo/alderleaf-logo-color.png" alt="Alderleaf" class="site-logo" width="250" height="85">
+      </a>
+      <nav class="site-nav site-header-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <a href="services.html" class="nav-link">Services</a>
+          <div class="nav-dropdown-panel">
+            <div class="nav-dropdown-menu">
+              <a href="services.html" class="nav-dropdown-link">Services</a>
+              <a href="removal.html" class="nav-dropdown-link">Tree Removal</a>
+              <a href="brushing-land-clearing.html" class="nav-dropdown-link">Brushing / Land Clearing</a>
+              <a href="pruning.html" class="nav-dropdown-link">Tree Pruning and Shrub Trimming</a>
+              <a href="chips.html" class="nav-dropdown-link">Firewood, Wood-Chipping & Mulch</a>
+              <a href="lawn-care.html" class="nav-dropdown-link">Lawn Care</a>
+              <a href="property-maintenance.html" class="nav-dropdown-link">Property Maintenance</a>
+              <a href="removal.html#assessment" class="nav-dropdown-link">Tree Assessments</a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+      <div class="site-header-actions">
+        <a href="quote.html" class="btn-header-cta">Request A Quote</a>
+      </div>
+      <button id="menu-toggle" type="button" class="site-header-menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+        <svg id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg id="menu-icon-close" class="is-hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu-panel" aria-label="Mobile navigation" hidden>
+      <ul class="mobile-menu-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="removal.html" class="mobile-nav-link-sub">Tree Removal</a></li>
+        <li><a href="brushing-land-clearing.html" class="mobile-nav-link-sub">Brushing / Land Clearing</a></li>
+        <li><a href="pruning.html" class="mobile-nav-link-sub">Tree Pruning and Shrub Trimming</a></li>
+        <li><a href="chips.html" class="mobile-nav-link-sub">Firewood, Wood-Chipping & Mulch</a></li>
+        <li><a href="lawn-care.html" class="mobile-nav-link-sub">Lawn Care</a></li>
+        <li><a href="property-maintenance.html" class="mobile-nav-link-sub">Property Maintenance</a></li>
+        <li><a href="removal.html#assessment" class="mobile-nav-link-sub">Tree Assessments</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+        <li class="mobile-menu-cta"><a href="quote.html" class="btn-header-cta">Request A Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-1">
+    <section class="page-hero">
+      <img src="assets/images/IMG_2003.jpg" alt="" class="page-hero-bg page-hero-bg--quote" aria-hidden="true" loading="eager">
+      <div class="hero-overlay-home" aria-hidden="true"></div>
+      <div class="site-container page-hero-content">
+        <h1 class="hero-heading">Request a Free Quote</h1>
+        <p class="hero-lead">Get in touch today — we'll respond as soon as we're able.</p>
+      </div>
+    </section>
+
+    <section class="bg-cream section-py">
+      <div class="site-container">
+        <div class="mx-auto max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-forest">Get in touch today</p>
+          <h2 class="mt-2 text-3xl font-normal">Schedule a Free Quote</h2>
+          <div class="section-divider mt-5"></div>
+          <div class="mt-10">
+            <form id="quote-form" class="space-y-5">
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="first_name" class="mb-1.5 block text-sm font-medium text-ink">First Name</label>
+                  <input type="text" id="first_name" name="first_name" required class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20">
+                </div>
+                <div>
+                  <label for="surname" class="mb-1.5 block text-sm font-medium text-ink">Last Name</label>
+                  <input type="text" id="surname" name="surname" required class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20">
+                </div>
+              </div>
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="your_email" class="mb-1.5 block text-sm font-medium text-ink">Email Address</label>
+                  <input type="email" id="your_email" name="your_email" required class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20">
+                </div>
+                <div>
+                  <label for="telephone" class="mb-1.5 block text-sm font-medium text-ink">Telephone</label>
+                  <input type="tel" id="telephone" name="telephone" class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20">
+                </div>
+              </div>
+              <div>
+                <label for="your_message" class="mb-1.5 block text-sm font-medium text-ink">Your Message</label>
+                <textarea id="your_message" name="your_message" rows="4" class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20"></textarea>
+              </div>
+              <button type="submit" class="inline-flex items-center rounded-lg bg-forest px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-forest-dark">Submit Your Quote Request</button>
+            </form>
+          </div>
+          <p class="mt-8 text-center text-sm text-slate">Or call <a href="tel:12505578733" class="font-semibold text-forest">1-250-557-TREE (8733)</a> or <a href="tel:12508580525" class="font-semibold text-forest">250-858-0525 (Cell)</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo/alderleaf-logo-white.png" alt="Alderleaf" class="footer-logo" width="200" height="58">
+          <p class="footer-tagline"><strong>"When experience matters!"</strong></p>
+        </div>
+        <nav aria-label="Contact details" class="footer-nav footer-nav-center">
+          <ul>
+            <li><a href="tel:12505578733">1-250-557-TREE (8733)</a></li>
+            <li><a href="tel:12508580525">250-858-0525 (Cell)</a></li>
+            <li><a href="mailto:office@alderleaf.ca">office@alderleaf.ca</a></li>
+            <li>Box 163, Port Clements, BC, V0T-1R0</li>
+          </ul>
+        </nav>
+        <nav aria-label="Company" class="footer-nav footer-nav-end">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>© Copyright 2026 | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('quote-form')?.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var data = new FormData(event.target);
+      var body = [
+        'Name: ' + data.get('first_name') + ' ' + data.get('surname'),
+        'Email: ' + data.get('your_email'),
+        'Phone: ' + data.get('telephone'),
+        '',
+        String(data.get('your_message') ?? ''),
+      ].join('\n');
+      window.location.href = 'mailto:office@alderleaf.ca?subject=' + encodeURIComponent('Quote Request from alderleaf.ca') + '&body=' + encodeURIComponent(body);
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

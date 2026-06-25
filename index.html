@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alderleaf — Land and Tree Services | Haida Gwaii</title>
+  <meta name="description" content="Alderleaf Land and Tree Services — professional tree removal, land clearing, pruning, and property maintenance on Haida Gwaii.">
+  <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: { DEFAULT: '#1d7a20', dark: '#123208', light: '#a7c441' },
+            accent: '#ff9500',
+            slate: '#374151',
+            ink: '#1F2937',
+            cream: '#f9f9f9',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col bg-white antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-forest focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+
+  <header id="site-header">
+    <div class="site-container site-header-grid">
+      <a href="index.html" class="site-header-logo shrink-0" aria-label="Alderleaf home">
+        <img src="assets/images/logo/alderleaf-logo-color.png" alt="Alderleaf" class="site-logo" width="250" height="85">
+      </a>
+      <nav class="site-nav site-header-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link nav-link-active">Home</a>
+        <div class="nav-dropdown">
+          <a href="services.html" class="nav-link">Services</a>
+          <div class="nav-dropdown-panel">
+            <div class="nav-dropdown-menu">
+              <a href="services.html" class="nav-dropdown-link">Services</a>
+              <a href="removal.html" class="nav-dropdown-link">Tree Removal</a>
+              <a href="brushing-land-clearing.html" class="nav-dropdown-link">Brushing / Land Clearing</a>
+              <a href="pruning.html" class="nav-dropdown-link">Tree Pruning and Shrub Trimming</a>
+              <a href="chips.html" class="nav-dropdown-link">Firewood, Wood-Chipping & Mulch</a>
+              <a href="lawn-care.html" class="nav-dropdown-link">Lawn Care</a>
+              <a href="property-maintenance.html" class="nav-dropdown-link">Property Maintenance</a>
+              <a href="removal.html#assessment" class="nav-dropdown-link">Tree Assessments</a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+      <div class="site-header-actions">
+        <a href="quote.html" class="btn-header-cta">Request A Quote</a>
+      </div>
+      <button id="menu-toggle" type="button" class="site-header-menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+        <svg id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg id="menu-icon-close" class="is-hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu-panel" aria-label="Mobile navigation" hidden>
+      <ul class="mobile-menu-list">
+        <li><a href="index.html" class="mobile-nav-link mobile-nav-link-active">Home</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="removal.html" class="mobile-nav-link-sub">Tree Removal</a></li>
+        <li><a href="brushing-land-clearing.html" class="mobile-nav-link-sub">Brushing / Land Clearing</a></li>
+        <li><a href="pruning.html" class="mobile-nav-link-sub">Tree Pruning and Shrub Trimming</a></li>
+        <li><a href="chips.html" class="mobile-nav-link-sub">Firewood, Wood-Chipping & Mulch</a></li>
+        <li><a href="lawn-care.html" class="mobile-nav-link-sub">Lawn Care</a></li>
+        <li><a href="property-maintenance.html" class="mobile-nav-link-sub">Property Maintenance</a></li>
+        <li><a href="removal.html#assessment" class="mobile-nav-link-sub">Tree Assessments</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+        <li class="mobile-menu-cta"><a href="quote.html" class="btn-header-cta">Request A Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-1">
+    <section class="hero-home">
+      <img
+        src="assets/images/Truck-pic-rear-2.jpg"
+        alt="Alderleaf service truck and wood chipper on Haida Gwaii"
+        class="hero-home-bg"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      >
+      <div class="hero-overlay-home" aria-hidden="true"></div>
+      <div class="site-container page-hero-content">
+        <p class="hero-eyebrow">Haida Gwaii, BC</p>
+        <h1 class="hero-heading hero-heading-home">Land and Tree<br>Services</h1>
+        <p class="hero-lead">Family owned and operated. Led by Chris Poschmann — BC Certified Faller, professional arborist, and Certified Danger-Tree Assessor.</p>
+        <p class="hero-tagline">"When experience matters!"</p>
+        <div class="hero-actions">
+          <a href="quote.html" class="btn-hero-primary">Schedule a Free Quote</a>
+          <a href="tel:12505578733" class="btn-hero-secondary">1-250-557-TREE (8733)</a>
+        </div>
+        <p class="hero-cell-link">Cell: <a href="tel:12508580525">250-858-0525</a></p>
+      </div>
+    </section>
+
+    <section class="bg-cream section-py">
+      <div class="site-container">
+        <div class="text-center">
+          <h2 class="section-heading">Services</h2>
+          <div class="section-divider mx-auto mt-5"></div>
+        </div>
+        <div class="services-grid">
+          <a href="removal.html" class="service-item">
+            <div class="service-item-photo">
+              <img src="assets/images/land-clearing-service.jpg" alt="Tree removal" loading="lazy">
+            </div>
+            <div class="service-item-copy">
+              <h3>Tree Removal</h3>
+              <p>We specialize in the take-down and removal of trees when there is limited space and danger to structures or other landscaping.</p>
+              <span class="read-more">Read more →</span>
+            </div>
+          </a>
+          <a href="brushing-land-clearing.html" class="service-item">
+            <div class="service-item-photo">
+              <img src="assets/images/brushing-land-clearing.jpg" alt="Land clearing" loading="lazy">
+            </div>
+            <div class="service-item-copy">
+              <h3>Land Clearing &amp; Brushing</h3>
+              <p>For both small lots or large acreages we are equipped to clear, process and remove trees and brush from your landscape.</p>
+              <span class="read-more">Read more →</span>
+            </div>
+          </a>
+          <a href="pruning.html" class="service-item">
+            <div class="service-item-photo">
+              <img src="assets/images/Chris-tree-trimming.jpg" alt="Tree pruning" loading="lazy">
+            </div>
+            <div class="service-item-copy">
+              <h3>Tree Pruning &amp; Shrub Trimming</h3>
+              <p>Pruning for view enhancement, tree and shrub health or production and also for hazard reduction.</p>
+              <span class="read-more">Read more →</span>
+            </div>
+          </a>
+          <a href="removal.html#assessment" class="service-item">
+            <div class="service-item-photo">
+              <img src="assets/images/20221006_093805.jpg" alt="Tree assessment" class="service-card-image-lighten" loading="lazy">
+            </div>
+            <div class="service-item-copy">
+              <h3>Tree Assessments</h3>
+              <p>Professional assessment of trees by Certified Danger-Tree Assessor with decades of local experience.</p>
+              <span class="read-more">Read more →</span>
+            </div>
+          </a>
+          <a href="chips.html" class="service-item">
+            <div class="service-item-photo">
+              <img src="assets/images/tree-work-yard.jpg" alt="Wood chipping" loading="lazy">
+            </div>
+            <div class="service-item-copy">
+              <h3>Wood Chipping &amp; Firewood Processing</h3>
+              <p>Providing wood-chipping services as well as occasional mulch sales and delivery.</p>
+              <span class="read-more">Read more →</span>
+            </div>
+          </a>
+          <a href="lawn-care.html" class="service-item">
+            <div class="service-item-photo">
+              <img src="assets/images/Lawn-Care.jpg" alt="Lawn care" loading="lazy">
+            </div>
+            <div class="service-item-copy">
+              <h3>Landscaping, Lawn Care &amp; More!</h3>
+              <p>Including spring and fall cleanups.</p>
+              <span class="read-more">Read more →</span>
+            </div>
+          </a>
+        </div>
+        <p class="mt-10 text-center"><a href="services.html" class="link-forest">View all services →</a></p>
+      </div>
+    </section>
+
+    <section class="bg-white section-py">
+      <div class="site-container">
+        <div class="about-home-grid">
+          <div class="about-home-copy">
+            <div class="about-home-header">
+              <h2 class="section-heading">About Chris Poschmann</h2>
+              <div class="section-divider mt-5"></div>
+            </div>
+            <div class="about-home-main">
+              <div class="prose-alderleaf">
+                <p>Alderleaf Land and Tree Services is a family owned and operated business serving Haida Gwaii since 2021. Chris has been a BC Certified Faller for 25+ years with over 22+ years of experience as a professional arborist and tree-climber.</p>
+                <p>Chris has been working with trees on Haida Gwaii since 2004 and has lived in communities including Daajing Giids, Tlell, Sandspit and Port Clements.</p>
+              </div>
+              <a href="about.html" class="about-home-link link-forest">Read the full story →</a>
+            </div>
+          </div>
+          <aside class="credentials-panel" aria-labelledby="credentials-heading">
+            <div class="credentials-header">
+              <h3 class="section-heading" id="credentials-heading">Experience &amp; Certifications</h3>
+              <div class="section-divider mt-5"></div>
+            </div>
+            <ul class="credentials-list">
+              <li><span class="credentials-check" aria-hidden="true">✓</span> BC Certified Faller – 25+ Years</li>
+              <li><span class="credentials-check" aria-hidden="true">✓</span> Professional Arborist &amp; Tree Climber – 22+ Years</li>
+              <li><span class="credentials-check" aria-hidden="true">✓</span> Certified Wildlife / Danger Tree Assessor</li>
+              <li><span class="credentials-check" aria-hidden="true">✓</span> Level 3 First Aid</li>
+              <li><span class="credentials-check" aria-hidden="true">✓</span> Fully Insured – $5 Million Liability</li>
+              <li><span class="credentials-check" aria-hidden="true">✓</span> Certified in Permaculture Landscape Design</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream section-py">
+      <div class="site-container">
+        <div class="text-center">
+          <h2 class="section-heading">What Our Clients Say</h2>
+          <div class="section-divider mx-auto mt-5"></div>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-block">
+            <p class="quote-title">"Great Job Guys"</p>
+            <div class="mt-3 flex gap-1 text-accent" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="mt-5 leading-relaxed">Chris and his team did a fantastic job removing our backyard trees. They showed up on time, worked hard and left our yard cleaner than when they started.</p>
+            <footer class="mt-4 text-sm font-medium text-forest-light">Jane D.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo/alderleaf-logo-white.png" alt="Alderleaf" class="footer-logo" width="200" height="58">
+          <p class="footer-tagline"><strong>"When experience matters!"</strong></p>
+        </div>
+        <nav aria-label="Contact details" class="footer-nav footer-nav-center">
+          <ul>
+            <li><a href="tel:12505578733">1-250-557-TREE (8733)</a></li>
+            <li><a href="tel:12508580525">250-858-0525 (Cell)</a></li>
+            <li><a href="mailto:office@alderleaf.ca">office@alderleaf.ca</a></li>
+            <li>Box 163, Port Clements, BC, V0T-1R0</li>
+          </ul>
+        </nav>
+        <nav aria-label="Company" class="footer-nav footer-nav-end">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>© Copyright 2026 | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
