@@ -87,6 +87,47 @@ body {
     0 2px 8px rgba(0, 12, 28, 0.5);
 }
 
+/* Services banner test — brighter, more readable hero copy */
+#main .page-hero.page-hero--bright-text .hero-eyebrow,
+#main .page-hero.page-hero--bright-text .hero-heading,
+#main .page-hero.page-hero--bright-text .hero-lead {
+  color: #ffffff;
+}
+
+#main .page-hero.page-hero--bright-text .hero-eyebrow {
+  text-shadow:
+    0 1px 2px rgba(0, 12, 28, 0.75),
+    0 2px 4px rgba(0, 12, 28, 0.45);
+}
+
+#main .page-hero.page-hero--bright-text .hero-heading {
+  text-shadow:
+    0 1px 2px rgba(0, 12, 28, 0.82),
+    0 2px 8px rgba(0, 12, 28, 0.42);
+}
+
+#main .page-hero.page-hero--bright-text .hero-lead {
+  font-weight: 600;
+  text-shadow:
+    0 1px 2px rgba(0, 12, 28, 0.75),
+    0 2px 6px rgba(0, 12, 28, 0.4);
+}
+
+.page-hero.page-hero--bright-text::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(30, 35, 40, 0.48) 0%,
+    rgba(30, 35, 40, 0.28) 30%,
+    rgba(30, 35, 40, 0.1) 50%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
 #main .bg-forest-dark p,
 #main .bg-forest-dark li {
   color: var(--color-on-dark-body);
@@ -808,6 +849,28 @@ h4 {
   color: inherit;
 }
 
+button.service-item,
+button.service-item-modal {
+  width: 100%;
+  border: none;
+  padding: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+button.service-item-modal:hover .service-item-photo img,
+button.service-item-modal:focus-visible .service-item-photo img {
+  transform: scale(1.02);
+}
+
+button.service-item-modal:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 4px;
+  border-radius: 1rem;
+}
+
 .service-item-photo {
   overflow: hidden;
   border-radius: 1rem;
@@ -820,6 +883,7 @@ h4 {
   display: block;
   width: 100%;
   height: auto;
+  transition: transform 0.2s ease;
   aspect-ratio: 1024 / 605;
   border-radius: 1rem;
 }
@@ -990,6 +1054,88 @@ h4 {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 2.5rem;
   }
+}
+
+.service-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.service-modal[hidden] {
+  display: none;
+}
+
+.service-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 0.55);
+}
+
+.service-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 40rem;
+  max-height: min(90vh, 52rem);
+  overflow-y: auto;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.service-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border: none;
+  background: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-slate);
+  cursor: pointer;
+}
+
+.service-modal-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1024 / 605;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.service-modal-title {
+  margin-top: 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.service-modal-body {
+  margin-top: 1rem;
+}
+
+.service-modal-body h3 {
+  margin-top: 1.25rem;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.service-modal-body p + p {
+  margin-top: 1rem;
+}
+
+.service-modal-quote {
+  display: inline-block;
+  margin-top: 1.5rem;
 }
 
 .service-page-cta {
@@ -1933,4 +2079,47 @@ h4 {
   line-height: 1.7;
   color: var(--color-on-dark-body);
   font-weight: 500;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.gallery-card {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  aspect-ratio: 1024 / 605;
+  background-color: #f5f5f4;
+  line-height: 0;
+  box-shadow: 0 10px 28px -12px rgb(18 50 8 / 0.18);
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.gallery-card:hover img,
+.gallery-card:focus-within img {
+  transform: scale(1.02);
 }

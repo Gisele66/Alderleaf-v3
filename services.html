@@ -40,17 +40,17 @@
           <div class="nav-dropdown-panel">
             <div class="nav-dropdown-menu">
               <a href="services.html" class="nav-dropdown-link">Services</a>
-              <a href="removal.html" class="nav-dropdown-link">Tree Removal</a>
-              <a href="brushing-land-clearing.html" class="nav-dropdown-link">Brushing / Land Clearing</a>
-              <a href="pruning.html" class="nav-dropdown-link">Tree Pruning and Shrub Trimming</a>
-              <a href="chips.html" class="nav-dropdown-link">Firewood, Wood-Chipping & Mulch</a>
-              <a href="lawn-care.html" class="nav-dropdown-link">Lawn Care</a>
-              <a href="property-maintenance.html" class="nav-dropdown-link">Property Maintenance</a>
-              <a href="removal.html#assessment" class="nav-dropdown-link">Tree Assessments</a>
+              <a href="services.html?service=removal" class="nav-dropdown-link">Tree Removal &amp; Tree Assessments</a>
+              <a href="services.html?service=brushing" class="nav-dropdown-link">Brushing / Land Clearing</a>
+              <a href="services.html?service=pruning" class="nav-dropdown-link">Tree Pruning and Shrub Trimming</a>
+              <a href="services.html?service=chips" class="nav-dropdown-link">Firewood, Wood-Chipping & Mulch</a>
+              <a href="services.html?service=lawn-care" class="nav-dropdown-link">Lawn Care</a>
+              <a href="services.html?service=property-maintenance" class="nav-dropdown-link">Property Maintenance</a>
             </div>
           </div>
         </div>
         <a href="about.html" class="nav-link">About Us</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="contact.html" class="nav-link">Contact Us</a>
       </nav>
       <div class="site-header-actions">
@@ -65,14 +65,14 @@
       <ul class="mobile-menu-list">
         <li><a href="index.html" class="mobile-nav-link">Home</a></li>
         <li><a href="services.html" class="mobile-nav-link mobile-nav-link-active">Services</a></li>
-        <li><a href="removal.html" class="mobile-nav-link-sub">Tree Removal</a></li>
-        <li><a href="brushing-land-clearing.html" class="mobile-nav-link-sub">Brushing / Land Clearing</a></li>
-        <li><a href="pruning.html" class="mobile-nav-link-sub">Tree Pruning and Shrub Trimming</a></li>
-        <li><a href="chips.html" class="mobile-nav-link-sub">Firewood, Wood-Chipping & Mulch</a></li>
-        <li><a href="lawn-care.html" class="mobile-nav-link-sub">Lawn Care</a></li>
-        <li><a href="property-maintenance.html" class="mobile-nav-link-sub">Property Maintenance</a></li>
-        <li><a href="removal.html#assessment" class="mobile-nav-link-sub">Tree Assessments</a></li>
+        <li><a href="services.html?service=removal" class="mobile-nav-link-sub">Tree Removal &amp; Tree Assessments</a></li>
+        <li><a href="services.html?service=brushing" class="mobile-nav-link-sub">Brushing / Land Clearing</a></li>
+        <li><a href="services.html?service=pruning" class="mobile-nav-link-sub">Tree Pruning and Shrub Trimming</a></li>
+        <li><a href="services.html?service=chips" class="mobile-nav-link-sub">Firewood, Wood-Chipping & Mulch</a></li>
+        <li><a href="services.html?service=lawn-care" class="mobile-nav-link-sub">Lawn Care</a></li>
+        <li><a href="services.html?service=property-maintenance" class="mobile-nav-link-sub">Property Maintenance</a></li>
         <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
         <li class="mobile-menu-cta"><a href="quote.html" class="btn-header-cta">Request A Quote</a></li>
       </ul>
@@ -80,7 +80,7 @@
   </header>
 
   <main id="main" class="flex-1">
-    <section class="page-hero">
+    <section class="page-hero page-hero--bright-text">
       <img src="assets/images/banner-services.jpg" alt="" class="page-hero-bg" aria-hidden="true" loading="eager">
       <div class="site-container page-hero-content">
         <p class="hero-eyebrow">Haida Gwaii, BC</p>
@@ -92,16 +92,16 @@
     <section class="section-py-inner">
       <div class="site-container">
         <div class="services-grid">
-          <a href="removal.html" class="service-item">
+          <button type="button" class="service-item service-item-modal" data-service-modal="removal">
             <div class="service-item-photo">
               <img src="assets/images/land-clearing-service.jpg" alt="Tree removal" loading="lazy">
             </div>
             <div class="service-item-copy">
-              <h3>Tree Removal</h3>
-              <p>Safe take-down and removal in limited spaces.</p>
+              <h3>Tree Removal &amp; Tree Assessments</h3>
+              <p>Safe take-down, removal, and professional tree assessments.</p>
             </div>
-          </a>
-          <a href="brushing-land-clearing.html" class="service-item">
+          </button>
+          <button type="button" class="service-item service-item-modal" data-service-modal="brushing">
             <div class="service-item-photo">
               <img src="assets/images/brushing-land-clearing.jpg" alt="Land clearing" loading="lazy">
             </div>
@@ -109,8 +109,8 @@
               <h3>Brushing / Land Clearing</h3>
               <p>Residential and commercial clearing projects.</p>
             </div>
-          </a>
-          <a href="pruning.html" class="service-item">
+          </button>
+          <button type="button" class="service-item service-item-modal" data-service-modal="pruning">
             <div class="service-item-photo">
               <img src="assets/images/Chris-tree-trimming.jpg" alt="Tree pruning" loading="lazy">
             </div>
@@ -118,8 +118,8 @@
               <h3>Tree Pruning and Shrub Trimming</h3>
               <p>Hedges, shrubs, and ornamental pruning.</p>
             </div>
-          </a>
-          <a href="chips.html" class="service-item">
+          </button>
+          <button type="button" class="service-item service-item-modal" data-service-modal="chips">
             <div class="service-item-photo">
               <img src="assets/images/tree-work-yard.jpg" alt="Wood chipping" loading="lazy">
             </div>
@@ -127,8 +127,8 @@
               <h3>Firewood, Wood-Chipping &amp; Mulch</h3>
               <p>Chipping services and mulch delivery.</p>
             </div>
-          </a>
-          <a href="lawn-care.html" class="service-item">
+          </button>
+          <button type="button" class="service-item service-item-modal" data-service-modal="lawn-care">
             <div class="service-item-photo">
               <img src="assets/images/Lawn-Care.jpg" alt="Lawn care" loading="lazy">
             </div>
@@ -136,8 +136,8 @@
               <h3>Lawn Care</h3>
               <p>Bi-weekly mowing and yard clean-ups.</p>
             </div>
-          </a>
-          <a href="property-maintenance.html" class="service-item">
+          </button>
+          <button type="button" class="service-item service-item-modal" data-service-modal="property-maintenance">
             <div class="service-item-photo">
               <img src="assets/images/Property-maintenance2.jpg" alt="Property maintenance" loading="lazy">
             </div>
@@ -145,13 +145,24 @@
               <h3>Property Maintenance</h3>
               <p>Ongoing landscape and property care.</p>
             </div>
-          </a>
+          </button>
         </div>
         <div class="mt-12 text-center">
           <a href="quote.html" class="inline-flex rounded-lg bg-forest px-6 py-3 text-sm font-semibold text-white transition hover:bg-forest-dark">Request a Free Quote</a>
         </div>
       </div>
     </section>
+
+    <div id="service-modal" class="service-modal" hidden>
+      <div class="service-modal-backdrop" data-service-close></div>
+      <div class="service-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
+        <button type="button" class="service-modal-close" data-service-close aria-label="Close service details">&times;</button>
+        <img id="service-modal-image" class="service-modal-image" src="" alt="">
+        <h2 id="service-modal-title" class="service-modal-title"></h2>
+        <div id="service-modal-body" class="service-modal-body prose-alderleaf"></div>
+        <a href="quote.html" class="btn-contact-quote service-modal-quote">Request a Free Quote</a>
+      </div>
+    </div>
   </main>
 
   <footer id="site-footer">
@@ -185,5 +196,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/services-modal.js"></script>
 </body>
 </html>

@@ -260,6 +260,33 @@ Values below come from `.hero-home-copy` overrides (what the homepage actually r
 
 ---
 
+## Services page hero (`.page-hero--bright-text`) — locked
+
+**Services page only. Do not change without approval.**
+
+| Property | Value |
+|----------|-------|
+| Banner image | `assets/images/banner-services.jpg` |
+| Text | Bright white `#ffffff` on eyebrow, heading, and lead |
+| Text shadow | Tight dark shadows (no wide glow) |
+| Left gradient scrim | `::after` linear-gradient, dark left fading to transparent ~65% |
+| Overlay | Left gradient only — not a full-image overlay |
+
+---
+
+## Services page cards + modals — locked (services page only)
+
+| Property | Value |
+|----------|-------|
+| Cards | `.service-item-modal` buttons (not links to detail pages); first card: **Tree Removal & Tree Assessments** |
+| Behaviour | Click opens `#service-modal` with service-specific content |
+| Script | `js/services-modal.js` |
+| Content | Consolidated copy from former detail pages — no separate page navigation from cards |
+| Quote CTA | *Request a Free Quote* inside each modal → `quote.html` |
+| Detail pages | Still exist for nav dropdown links; cards on `services.html` use modals only |
+
+---
+
 ## About page column layout
 
 | Property | Value |

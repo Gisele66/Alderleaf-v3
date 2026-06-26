@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request a Free Quote — Alderleaf</title>
-  <meta name="description" content="Request a free quote from Alderleaf Land and Tree Services on Haida Gwaii.">
+  <title>Gallery — Alderleaf</title>
+  <meta name="description" content="Photo gallery — Alderleaf land and tree services, equipment, and crew at work on Haida Gwaii.">
   <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <a href="about.html" class="nav-link">About Us</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="gallery.html" class="nav-link nav-link-active">Gallery</a>
         <a href="contact.html" class="nav-link">Contact Us</a>
       </nav>
       <div class="site-header-actions">
@@ -72,7 +72,7 @@
         <li><a href="services.html?service=lawn-care" class="mobile-nav-link-sub">Lawn Care</a></li>
         <li><a href="services.html?service=property-maintenance" class="mobile-nav-link-sub">Property Maintenance</a></li>
         <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-        <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="gallery.html" class="mobile-nav-link mobile-nav-link-active">Gallery</a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
         <li class="mobile-menu-cta"><a href="quote.html" class="btn-header-cta">Request A Quote</a></li>
       </ul>
@@ -80,54 +80,51 @@
   </header>
 
   <main id="main" class="flex-1">
-    <section class="page-hero">
-      <img src="assets/images/IMG_2003.jpg" alt="" class="page-hero-bg page-hero-bg--quote" aria-hidden="true" loading="eager">
+    <section class="page-hero page-hero--bright-text">
+      <img src="assets/images/banner-2-truck.jpg" alt="" class="page-hero-bg" aria-hidden="true" loading="eager">
       <div class="site-container page-hero-content">
-        <h1 class="hero-heading">Request a Free Quote</h1>
-        <p class="hero-lead">Get in touch today — we'll respond as soon as we're able.</p>
+        <p class="hero-eyebrow">Our work in the field</p>
+        <h1 class="hero-heading mt-3">Gallery</h1>
+        <p class="hero-lead">Equipment, crew, and projects across Haida Gwaii — tree work, land clearing, lawn care, and more.</p>
       </div>
     </section>
 
-    <section class="bg-cream section-py">
+    <section class="section-py-inner">
       <div class="site-container">
-        <div class="mx-auto max-w-2xl">
-          <p class="text-sm font-semibold uppercase tracking-widest text-forest">Get in touch today</p>
-          <h2 class="mt-2 text-3xl font-normal">Schedule a Free Quote</h2>
-          <div class="section-divider mt-5"></div>
-          <div class="mt-10">
-            <form id="quote-form" class="space-y-5">
-              <div class="grid gap-5 sm:grid-cols-2">
-                <div>
-                  <label for="first_name" class="mb-1.5 block text-sm font-medium text-ink">First Name</label>
-                  <input type="text" id="first_name" name="first_name" required class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20">
-                </div>
-                <div>
-                  <label for="surname" class="mb-1.5 block text-sm font-medium text-ink">Last Name</label>
-                  <input type="text" id="surname" name="surname" required class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20">
-                </div>
-              </div>
-              <div class="grid gap-5 sm:grid-cols-2">
-                <div>
-                  <label for="your_email" class="mb-1.5 block text-sm font-medium text-ink">Email Address</label>
-                  <input type="email" id="your_email" name="your_email" required class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20">
-                </div>
-                <div>
-                  <label for="telephone" class="mb-1.5 block text-sm font-medium text-ink">Telephone</label>
-                  <input type="tel" id="telephone" name="telephone" class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20">
-                </div>
-              </div>
-              <div>
-                <label for="your_message" class="mb-1.5 block text-sm font-medium text-ink">Your Message</label>
-                <textarea id="your_message" name="your_message" rows="4" class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-ink shadow-sm transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20"></textarea>
-              </div>
-              <button type="submit" class="inline-flex items-center rounded-lg bg-forest px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-forest-dark">Submit Your Quote Request</button>
-            </form>
-          </div>
-          <p class="mt-8 text-center text-sm text-slate">Or call <a href="tel:12505578733" class="font-semibold text-forest">1-250-557-TREE (8733)</a> or <a href="tel:12508580525" class="font-semibold text-forest">250-858-0525 (Cell)</a></p>
+        <div class="gallery-grid">
+          <figure class="gallery-card"><img src="assets/images/gallery/IMG_5866.jpg" alt="Crew feeding branches into a wood chipper beside an Alderleaf truck" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/Woodchipping.jpg" alt="Wood chips blowing into an Alderleaf chip truck" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/Truck-pic-rear-2.jpg" alt="Rear view of Alderleaf truck and equipment" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/tree-work-yard.jpg" alt="Wood chipping and yard work at an Alderleaf site" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/20220630_114805.jpg" alt="Wood chip and mulch operations" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/brushing-land-clearing.jpg" alt="Brushing and land clearing with heavy equipment" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/land-clearing-service.jpg" alt="Land clearing service in progress" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/Land-Clearing.jpg" alt="Property land clearing project" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/20220424_102637.jpg" alt="Brushing work with specialized machinery" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/20220424_102807.jpg" alt="Land clearing equipment at work" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/Chris-tree-trimming.jpg" alt="Tree pruning and shrub trimming" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/Tree-Removal-2.jpg" alt="Tree removal work in progress" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/tree_removal-1.jpg" alt="Pruning and tree removal on a residential property" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/20221006_093805.jpg" alt="Tree assessment and arborist work" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/IMG_1955.jpg" alt="Tree removal and rigging work" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/IMG_5803.jpg" alt="Tree work in progress on site" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/Lawn-Care.jpg" alt="Professional lawn mowing" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/Lawn-Care-2.jpg" alt="Lawn care on Haida Gwaii" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/lawn-sprinklers.jpg" alt="Lawn care and irrigation on a maintained property" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/Property-maintenance2.jpg" alt="Property maintenance and landscape work" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/20220709_090309.jpg" alt="Alderleaf tree services on Haida Gwaii" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/20220322_085210.jpg" alt="Alderleaf crew at a work site" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/IMG_2003.jpg" alt="Alderleaf equipment on a job site" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/info-05.jpg" alt="Land clearing services" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/6b0445ea24c7f2e33f7fc735e4e72e09.0.jpg" alt="Tree service field work" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/9fc1f638893ab9895455ee06a2c2224f.0.jpg" alt="Professional tree removal work" width="1024" height="605" loading="lazy"></figure>
+          <figure class="gallery-card"><img src="assets/images/gallery/b3145e40139125f9766498d86f06de23.0.jpg" alt="Alderleaf crew and equipment on site" width="1024" height="605" loading="lazy"></figure>
         </div>
       </div>
     </section>
   </main>
+
+  <div class="footer-separator" aria-hidden="true"></div>
 
   <footer id="site-footer">
     <div class="site-container">
@@ -158,21 +155,6 @@
       <p>© Copyright 2026 | All Rights Reserved</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('quote-form')?.addEventListener('submit', function (event) {
-      event.preventDefault();
-      var data = new FormData(event.target);
-      var body = [
-        'Name: ' + data.get('first_name') + ' ' + data.get('surname'),
-        'Email: ' + data.get('your_email'),
-        'Phone: ' + data.get('telephone'),
-        '',
-        String(data.get('your_message') ?? ''),
-      ].join('\n');
-      window.location.href = 'mailto:office@alderleaf.ca?subject=' + encodeURIComponent('Quote Request from alderleaf.ca') + '&body=' + encodeURIComponent(body);
-    });
-  </script>
 
   <script src="js/main.js"></script>
 </body>
