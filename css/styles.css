@@ -1646,6 +1646,22 @@ button.service-item-modal:focus-visible {
   overflow: hidden;
 }
 
+.page-hero--compact {
+  min-height: 10rem;
+}
+
+@media (min-width: 768px) {
+  .page-hero--compact {
+    min-height: 14rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-hero--compact {
+    min-height: 16rem;
+  }
+}
+
 .page-hero-bg--about {
   object-position: 48% 88%;
 }
@@ -1733,21 +1749,66 @@ button.service-item-modal:focus-visible {
 
 .about-page-grid {
   display: grid;
-  align-items: center;
-  gap: 3rem;
+  align-items: start;
+  gap: 3.5rem;
 }
 
 @media (min-width: 1024px) {
   .about-page-grid {
-    grid-template-columns: 3fr 2fr;
-    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-page-grid {
+    gap: 7.5rem;
   }
 }
 
 .about-page-copy {
-  max-width: 38rem;
   width: 100%;
-  align-self: center;
+}
+
+.about-page-heading {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-forest-light);
+}
+
+@media (min-width: 1024px) {
+  .about-page-heading {
+    font-size: 1.875rem;
+  }
+}
+
+.about-page-copy p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.about-page-copy p + p {
+  margin-top: 1rem;
+}
+
+.about-page-signature {
+  margin-top: 2rem;
+}
+
+.about-page-signature img {
+  display: block;
+  height: 4rem;
+  width: auto;
+}
+
+.about-page-founder {
+  margin-top: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-ink);
 }
 
 .prose-alderleaf p + p {
@@ -1899,8 +1960,9 @@ button.service-item-modal:focus-visible {
 
 .about-photo {
   width: 100%;
+  height: auto;
   border-radius: 1rem;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .link-forest {
