@@ -911,6 +911,18 @@ button.service-item-modal:focus-visible {
   filter: brightness(1.2) contrast(1.05) saturate(1.08);
 }
 
+.service-card-image-focus-climber {
+  object-fit: cover;
+  object-position: 48% 76%;
+  transform: scale(1.35);
+  transform-origin: 48% 72%;
+}
+
+.service-card-image-cover {
+  object-fit: cover;
+  object-position: center 42%;
+}
+
 .service-item-copy {
   margin-top: 1.25rem;
   padding: 0;
@@ -1751,6 +1763,25 @@ button.service-item-modal:focus-visible {
   .contact-page-grid {
     grid-template-columns: 2fr 3fr;
     gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-stack,
+  .contact-photo-wrap {
+    grid-row: 1;
+  }
+
+  .contact-stack {
+    grid-column: 1;
+  }
+
+  .contact-photo-wrap {
+    grid-column: 2;
+    height: 0;
+    min-height: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
   }
 }
 
@@ -1843,15 +1874,26 @@ button.service-item-modal:focus-visible {
 }
 
 .contact-photo {
+  display: block;
   width: 100%;
-  border-radius: 1rem;
+  height: 100%;
   object-fit: cover;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  object-position: center 42%;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1023px) {
+  .contact-photo-wrap {
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    aspect-ratio: 1024 / 605;
+  }
+
   .contact-photo {
-    min-height: 32rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 42%;
   }
 }
 
