@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wood Chipping, Firewood and Mulch — Alderleaf</title>
-  <meta name="description" content="Wood chipping, firewood processing, and mulch delivery on Haida Gwaii.">
+  <title>Client Reviews — Alderleaf</title>
+  <meta name="description" content="Read what Alderleaf clients say about our land and tree services on Haida Gwaii.">
   <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -36,14 +36,14 @@
       <nav class="site-nav site-header-nav" aria-label="Main navigation">
         <a href="index.html" class="nav-link">Home</a>
         <div class="nav-dropdown">
-          <a href="services.html" class="nav-link nav-link-active">Services</a>
+          <a href="services.html" class="nav-link">Services</a>
           <div class="nav-dropdown-panel">
             <div class="nav-dropdown-menu">
               <a href="services.html" class="nav-dropdown-link">Services</a>
               <a href="removal.html" class="nav-dropdown-link">Tree Removal</a>
               <a href="brushing-land-clearing.html" class="nav-dropdown-link">Brushing / Land Clearing</a>
               <a href="pruning.html" class="nav-dropdown-link">Tree Pruning and Shrub Trimming</a>
-              <a href="chips.html" class="nav-dropdown-link nav-dropdown-link-active">Firewood, Wood-Chipping & Mulch</a>
+              <a href="chips.html" class="nav-dropdown-link">Firewood, Wood-Chipping & Mulch</a>
               <a href="lawn-care.html" class="nav-dropdown-link">Lawn Care</a>
               <a href="property-maintenance.html" class="nav-dropdown-link">Property Maintenance</a>
               <a href="removal.html#assessment" class="nav-dropdown-link">Tree Assessments</a>
@@ -80,60 +80,53 @@
   </header>
 
   <main id="main" class="flex-1">
-    <section class="page-hero">
-      <img src="assets/images/20220630_114805.jpg" alt="" class="page-hero-bg page-hero-bg--chips" aria-hidden="true" loading="eager">
-      <div class="site-container page-hero-content">
-        <h1 class="hero-heading">Wood-Chipping and Mulch Delivery</h1>
-        <div class="hero-actions">
-          <a href="quote.html" class="btn-hero-primary">Request a Free Quote</a>
-        </div>
+    <section class="bg-cream section-py-contact-intro">
+      <div class="site-container">
+        <h1 class="contact-intro-heading">What Our Clients Say</h1>
+        <div class="section-divider mt-5"></div>
       </div>
     </section>
 
-    <section class="section-py-inner">
-      <div class="site-container service-section-grid">
-        <div class="service-section-copy">
-          <h2 class="section-heading">Wood-Chip Wait List</h2>
-          <div class="section-divider mt-5"></div>
-          <p class="mt-6 leading-relaxed">Wood-chips are in high demand locally with there usually being a standing wait list of customers wanting wood-chips delivered. We do charge for a wood chip delivery with pricing based upon the quality, the cubic yard delivered and the distance out of the way to travel if required. We will often say, the best way to acquire a load of wood-chips yourself is to contract us to do some tree-work. Then not only are the wood-chips yours to keep, we can often offer a discount on the job if we can leave them behind for time saved with not handling additional materials. We can also be contracted to chip your brush piles with by-the-job or by-the-hour pricing available.</p>
-        </div>
-        <div class="photo-card">
-          <img src="assets/images/Woodchipping.jpg" alt="Wood chipping in progress" loading="lazy">
-        </div>
+    <section class="section-py section-testimonials">
+      <div class="site-container">
+        <div id="reviews-all-grid" class="testimonials-grid reviews-all-grid"></div>
       </div>
     </section>
 
-    <section class="bg-cream section-py-inner">
-      <div class="site-container service-section-grid">
-        <div class="photo-card">
-          <img src="assets/images/tree-work-yard.jpg" alt="Wood chipping and yard work" loading="lazy">
-        </div>
-        <div class="service-section-copy">
-          <h2 class="section-heading">Wood chipping / Mulch Sales</h2>
-          <div class="section-divider mt-5"></div>
-          <p class="mt-6 leading-relaxed">Providing wood-chipping services as well as occasional mulch sales and delivery.</p>
+    <div id="review-modal" class="review-modal" hidden>
+      <div class="review-modal-backdrop" data-review-close></div>
+      <div class="review-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="review-modal-title">
+        <button type="button" class="review-modal-close" data-review-close aria-label="Close review form">&times;</button>
+        <h3 id="review-modal-title" class="review-modal-title">Leave a Review</h3>
+        <form id="review-form" class="review-form">
+          <label class="review-comment-label" for="review-name">Your name</label>
+          <input type="text" id="review-name" name="name" class="review-name" required placeholder="Your name" autocomplete="name">
+          <label class="review-comment-label" for="review-title">Review title <span class="review-optional">(optional)</span></label>
+          <input type="text" id="review-title" name="title" class="review-name" placeholder="e.g. Great job guys" maxlength="80">
+          <fieldset class="review-stars-field">
+            <legend class="review-stars-label">Your rating</legend>
+            <div class="review-stars-input" id="review-stars-input" role="radiogroup" aria-label="Star rating">
+              <button type="button" class="review-star-btn" data-star="1" aria-label="1 star">★</button>
+              <button type="button" class="review-star-btn" data-star="2" aria-label="2 stars">★</button>
+              <button type="button" class="review-star-btn" data-star="3" aria-label="3 stars">★</button>
+              <button type="button" class="review-star-btn" data-star="4" aria-label="4 stars">★</button>
+              <button type="button" class="review-star-btn" data-star="5" aria-label="5 stars">★</button>
+            </div>
+            <input type="hidden" name="rating" id="review-rating" value="">
+          </fieldset>
+          <label class="review-comment-label" for="review-comment">Your review</label>
+          <textarea id="review-comment" name="comment" class="review-comment" rows="5" required maxlength="200" placeholder="Tell us about your experience…"></textarea>
+          <p class="review-char-count" id="review-char-count" aria-live="polite">0 / 200</p>
+          <button type="submit" class="btn-review-submit">Submit Review</button>
+        </form>
+        <div id="review-thanks" class="review-thanks" hidden>
+          <p class="review-thanks-title">Thank you!</p>
+          <p class="review-thanks-text">We appreciate you taking the time to share your feedback.</p>
+          <button type="button" class="btn-review-submit" data-review-close>Close</button>
         </div>
       </div>
-    </section>
-
-    <section class="section-py-inner">
-      <div class="site-container service-section-grid">
-        <div class="service-section-copy" aria-hidden="true"></div>
-        <div class="photo-card">
-          <img src="assets/images/photopea-banner-wood-chips.jpg" alt="Wood chips and mulch" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="service-page-cta bg-cream">
-      <div class="site-container service-page-cta-inner">
-        <p class="service-page-cta-text leading-relaxed">Fully insured and committed to safety, you can enjoy peace-of-mind when Alderleaf is on the job.</p>
-        <a href="quote.html" class="btn-contact-quote">Request a Free Quote</a>
-      </div>
-    </section>
+    </div>
   </main>
-
-  <div class="footer-separator" aria-hidden="true"></div>
 
   <footer id="site-footer">
     <div class="site-container">

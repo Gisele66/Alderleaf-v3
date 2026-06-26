@@ -80,20 +80,14 @@ Extracted from the live Astro codebase (`site/src/styles/global.css`, components
 
 ### Hero image (`.hero-home-bg`)
 
+**Locked asset:** `assets/images/banner-home.jpg` (crew clearing branches; dark foliage on the left for hero text contrast). Do not replace without approval.
+
 | Property | Value |
 |----------|-------|
 | Position | `absolute inset-0`, `h-full w-full` |
 | Object fit | `cover` |
-| Object position | `62% center` (default); `66% center` at `min-width: 1024px` |
-
-### Overlay / darkening (`.hero-overlay-home`)
-
-| Property | Value |
-|----------|-------|
-| Background | `rgba(0, 0, 0, 0.35)` |
-| Pointer events | `none` |
-
-*(Inner page heroes use `.hero-overlay` with `background: transparent` — not used on homepage.)*
+| Object position | `left center` |
+| Overlay | None |
 
 ### Hero text container (`.hero-home-content`)
 
@@ -220,6 +214,52 @@ Values below come from `.hero-home-copy` overrides (what the homepage actually r
 
 ---
 
+## Homepage testimonials (`.section-testimonials`) — locked
+
+**Do not change layout, copy, colours, sizing, or review popup behaviour without approval.**
+
+| Property | Value |
+|----------|-------|
+| Section | `bg-cream section-py section-testimonials` |
+| Section padding | `6rem` block → `8rem` at `1024px+` |
+| Heading | `.section-heading` up to `3.5rem` at `1024px+`; divider `6rem` × `4px` |
+| Grid | 1 column (default); `repeat(3, minmax(0, 1fr))` at `1024px+` on homepage |
+| Card | `.testimonial-block` — `#123208`; flex column; equal height; min-height `20rem` → `24rem` at `1024px+`; padding `2.5rem` → `3rem`; shadow `0 20px 45px -16px rgb(0 0 0 / 0.4)` |
+| Quote title | `2rem` → `2.375rem` at `1024px+` |
+| Body | `1.25rem` → `1.3125rem` at `1024px+` |
+| Stars | `1.5rem`, accent `#ff9500` |
+| Text colours | Title `#ffffff`; body `#f8fafc`; author `#a7c441` |
+| No overlay | Cards use light text on dark green only — no image overlays or darkening filters |
+| All reviews link | `.testimonials-all-link` → `reviews.html`; outlined button, fills green on hover |
+
+### Three columns (fixed order)
+
+| Column | Content |
+|--------|---------|
+| 1 | Jane D. — *"Great Job Guys"* — 5 stars — real client review |
+| 2 | Featured slot — latest submitted review from `localStorage`, or Gisele LaRose placeholder |
+| 3 | CTA — *Share Your Experience* — **Leave a Review** (`.btn-review-open`) |
+
+### All reviews page (`reviews.html`)
+
+| Property | Value |
+|----------|-------|
+| URL | `reviews.html` (not in main nav) |
+| Layout | Same card grid + CTA; auto-fit columns; populated by `js/main.js` |
+| Link from homepage | *Read all reviews* below testimonial grid |
+
+### Review popup (`#review-modal`)
+
+| Property | Value |
+|----------|-------|
+| Trigger | `.btn-review-open` on homepage and reviews page |
+| Fields | Name (required), title (optional), star rating (1–5), comment (required, max 200 chars with live counter) |
+| Behaviour | Thank-you message on submit; updates featured card and reviews grid |
+| Script | `js/main.js` |
+| Persistence | `localStorage` key `alderleaf-reviews` (browser only, no backend yet) |
+
+---
+
 ## About page column layout
 
 | Property | Value |
@@ -283,7 +323,7 @@ Values below come from `.hero-home-copy` overrides (what the homepage actually r
 | Contact page `h1` | `2.25rem` → `3rem` → `3.75rem` (`text-4xl sm:text-5xl lg:text-6xl`) |
 | Contact block `h2` | `1.5rem` (`text-2xl`) / `700` |
 | Contact links | `1.125rem` (`text-lg`) / `600` |
-| Homepage testimonial quote | `1.5rem` (`text-2xl`) / serif / `700` |
+| Homepage testimonial quote (`.quote-title`) | `2rem` → `2.375rem` at `1024px+` / serif / `700` / `#ffffff` |
 | Footer copyright | `0.875rem` (`text-sm`) |
 
 ### Inner page hero (`.hero-heading`, not homepage copy overrides)

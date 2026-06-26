@@ -82,14 +82,13 @@
   <main id="main" class="flex-1">
     <section class="hero-home">
       <img
-        src="assets/images/Truck-pic-rear-2.jpg"
-        alt="Alderleaf service truck and wood chipper on Haida Gwaii"
+        src="assets/images/banner-home.jpg"
+        alt="Alderleaf crew clearing branches on Haida Gwaii"
         class="hero-home-bg"
         loading="eager"
         fetchpriority="high"
         decoding="async"
       >
-      <div class="hero-overlay-home" aria-hidden="true"></div>
       <div class="site-container page-hero-content">
         <p class="hero-eyebrow">Haida Gwaii, BC</p>
         <h1 class="hero-heading hero-heading-home">Land and Tree<br>Services</h1>
@@ -209,7 +208,7 @@
       </div>
     </section>
 
-    <section class="bg-cream section-py">
+    <section class="bg-cream section-py section-testimonials">
       <div class="site-container">
         <div class="text-center">
           <h2 class="section-heading">What Our Clients Say</h2>
@@ -218,13 +217,61 @@
         <div class="testimonials-grid">
           <blockquote class="testimonial-block">
             <p class="quote-title">"Great Job Guys"</p>
-            <div class="mt-3 flex gap-1 text-accent" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="mt-5 leading-relaxed">Chris and his team did a fantastic job removing our backyard trees. They showed up on time, worked hard and left our yard cleaner than when they started.</p>
-            <footer class="mt-4 text-sm font-medium text-forest-light">Jane D.</footer>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-body">Chris and his team did a fantastic job removing our backyard trees. They showed up on time, worked hard and left our yard cleaner than when they started.</p>
+            <footer class="testimonial-author">Jane D.</footer>
           </blockquote>
+          <blockquote class="testimonial-block" id="featured-testimonial">
+            <p class="quote-title" id="featured-testimonial-title">"Placeholder Review"</p>
+            <div class="testimonial-stars" id="featured-testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-body" id="featured-testimonial-body">Review text coming soon.</p>
+            <footer class="testimonial-author" id="featured-testimonial-author">Gisele LaRose</footer>
+          </blockquote>
+          <div class="testimonial-block testimonial-cta">
+            <p class="quote-title">Share Your Experience</p>
+            <p class="testimonial-body">Had a great experience with Alderleaf? We would love to hear from you.</p>
+            <button type="button" class="btn-review-open" id="review-open-btn">Leave a Review</button>
+          </div>
         </div>
+        <p class="testimonials-all-link">
+          <a href="reviews.html">Read all reviews</a>
+        </p>
       </div>
     </section>
+
+    <div id="review-modal" class="review-modal" hidden>
+      <div class="review-modal-backdrop" data-review-close></div>
+      <div class="review-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="review-modal-title">
+        <button type="button" class="review-modal-close" data-review-close aria-label="Close review form">&times;</button>
+        <h3 id="review-modal-title" class="review-modal-title">Leave a Review</h3>
+        <form id="review-form" class="review-form">
+          <label class="review-comment-label" for="review-name">Your name</label>
+          <input type="text" id="review-name" name="name" class="review-name" required placeholder="Your name" autocomplete="name">
+          <label class="review-comment-label" for="review-title">Review title <span class="review-optional">(optional)</span></label>
+          <input type="text" id="review-title" name="title" class="review-name" placeholder="e.g. Great job guys" maxlength="80">
+          <fieldset class="review-stars-field">
+            <legend class="review-stars-label">Your rating</legend>
+            <div class="review-stars-input" id="review-stars-input" role="radiogroup" aria-label="Star rating">
+              <button type="button" class="review-star-btn" data-star="1" aria-label="1 star">★</button>
+              <button type="button" class="review-star-btn" data-star="2" aria-label="2 stars">★</button>
+              <button type="button" class="review-star-btn" data-star="3" aria-label="3 stars">★</button>
+              <button type="button" class="review-star-btn" data-star="4" aria-label="4 stars">★</button>
+              <button type="button" class="review-star-btn" data-star="5" aria-label="5 stars">★</button>
+            </div>
+            <input type="hidden" name="rating" id="review-rating" value="">
+          </fieldset>
+          <label class="review-comment-label" for="review-comment">Your review</label>
+          <textarea id="review-comment" name="comment" class="review-comment" rows="5" required maxlength="200" placeholder="Tell us about your experience…"></textarea>
+          <p class="review-char-count" id="review-char-count" aria-live="polite">0 / 200</p>
+          <button type="submit" class="btn-review-submit">Submit Review</button>
+        </form>
+        <div id="review-thanks" class="review-thanks" hidden>
+          <p class="review-thanks-title">Thank you!</p>
+          <p class="review-thanks-text">We appreciate you taking the time to share your feedback.</p>
+          <button type="button" class="btn-review-submit" data-review-close>Close</button>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer id="site-footer">
