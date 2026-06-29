@@ -2524,6 +2524,10 @@ button.gallery-card:focus-visible {
 
 /* Mobile-only (max-width). Desktop min-width rules unchanged. */
 @media (max-width: 1023px) {
+  :root {
+    --banner-frame-size: 1px;
+  }
+
   html {
     overflow-x: clip;
   }
@@ -2535,6 +2539,11 @@ button.gallery-card:focus-visible {
   .hero-home {
     aspect-ratio: auto;
     background-color: var(--color-cream);
+  }
+
+  .hero-home::before,
+  .hero-home::after {
+    display: none;
   }
 
   .hero-home-bg {
@@ -2549,6 +2558,9 @@ button.gallery-card:focus-visible {
     max-height: 36vh;
     object-fit: cover;
     object-position: left center;
+    border-top: var(--banner-frame-size) solid var(--color-forest);
+    border-bottom: var(--banner-frame-size) solid var(--color-forest);
+    box-sizing: border-box;
   }
 
   .hero-home .page-hero-content {
