@@ -95,6 +95,7 @@ Extracted from the live Astro codebase (`site/src/styles/global.css`, components
 | Aspect ratio | **`1920 / 700`** (688px image + 6px top/bottom frame via `--banner-frame-size`) |
 | Scales | Proportionally at all screen widths — same framing, no breakpoint height clamps |
 | Fallback background | `#1d7a20` (forest) |
+| Frame stripes | `::before` / `::after` bars, `--banner-frame-size` (`0.375rem` / 6px), forest green above and below image |
 
 ### Hero text container (`.page-hero-content` in `.hero-home`)
 
@@ -236,17 +237,56 @@ Heading sizes use `.hero-home .hero-heading.hero-heading-home` (overrides shared
 
 ---
 
-## Services page hero (`.page-hero--bright-text`) — locked
+---
+
+## Inner page banners (`.page-hero`) — **LOCKED**
+
+**Do not change** frame stripes, per-page banner sizing, or bright-text styling without explicit user approval.
+
+### Frame stripes (all `.page-hero` pages)
+
+| Property | Value |
+|----------|-------|
+| Token | `--banner-frame-size`: `0.375rem` (6px) |
+| Top / bottom bars | `.page-hero::before` and `.page-hero::after`, forest green `#1d7a20`, `z-index: 1` |
+| Default image | `.page-hero-bg` inset top/bottom by frame size; `height: auto`; `object-fit: cover` |
+
+Homepage uses `.hero-home` with its own stripe rules (same bar size).
+
+### Bright-text pages (Services, About, Gallery)
+
+| Property | Value |
+|----------|-------|
+| Class | `.page-hero--bright-text` |
+| Text | White `#ffffff` on eyebrow, heading, lead |
+| Text shadow | Tight dark shadows only |
+| Gradient overlay | **None** — do not re-add |
+
+---
+
+## Services page hero — locked
 
 **Services page only. Do not change without approval.**
 
 | Property | Value |
 |----------|-------|
 | Banner image | `assets/images/banner-services.jpg` |
-| Text | Bright white `#ffffff` on eyebrow, heading, and lead |
-| Text shadow | Tight dark shadows (no wide glow) |
-| Left gradient scrim | `::after` linear-gradient, dark left fading to transparent ~65% |
-| Overlay | Left gradient only — not a full-image overlay |
+| Image fit | `inset: 0`; `height: 100%`; `object-fit: cover`; `object-position: 74% 50%` |
+| Frame stripes | Same as all `.page-hero` pages (top/bottom bars) |
+| Overlay | None |
+
+Scoped in CSS via `.page-hero:has(> img[src$="banner-services.jpg"])`.
+
+---
+
+## About page hero — locked
+
+| Property | Value |
+|----------|-------|
+| Banner image | `assets/images/IMG_2003.jpg` (`.page-hero-bg--about`) |
+| Image fit | `height: calc(100% - (2 * var(--banner-frame-size)))`; `object-fit: cover`; `object-position: 48% bottom` |
+| Frame stripes | Same as all `.page-hero` pages |
+| Overlay | None |
 
 ---
 
@@ -271,7 +311,7 @@ Heading sizes use `.hero-home .hero-heading.hero-heading-home` (overrides shared
 | Grid | `grid items-start gap-12 lg:grid-cols-[3fr_2fr] lg:gap-20` |
 | Left column | Prose text + signature image (`mt-8 h-16 w-auto`) |
 | Right column | Full-width image, `rounded-2xl shadow-xl` |
-| Page hero (above content) | `.page-hero` min-height `28rem` → `36rem` (768px+) → `44rem` (1024px+); overlay transparent |
+| Page hero (above content) | `.page-hero` min-height `28rem` → `36rem` (768px+) → `44rem` (1024px+); see [About page hero — locked](#about-page-hero--locked) |
 
 ---
 
@@ -342,6 +382,7 @@ Heading sizes use `.hero-home .hero-heading.hero-heading-home` (overrides shared
 
 ## Notes
 
-- Homepage hero is **locked** — see [Homepage hero](#homepage-hero-hero-home--locked). Asset: `photopea-home-banner-road-crew.jpg` at 1920×688; container `aspect-ratio: 1920 / 700`.
+- Homepage hero is **locked** — see [Homepage hero](#homepage-hero-hero-home--locked).
+- Inner page banners and frame stripes are **locked** — see [Inner page banners](#inner-page-banners-page-hero--locked).
 - `.hero-cell-link` is `display: none` on homepage (markup present but hidden).
 - Inner pages use `.site-container-page` (`1320px` max); homepage sections use full `1920px` container.
