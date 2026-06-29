@@ -1984,6 +1984,16 @@ button.service-item-modal:focus-visible {
   font-weight: 400;
 }
 
+.contact-page-intro {
+  background-color: var(--color-cream);
+  background-image: linear-gradient(
+    180deg,
+    rgb(29 122 32 / 0.14) 0%,
+    rgb(167 196 65 / 0.08) 32%,
+    var(--color-cream) 100%
+  );
+}
+
 @media (min-width: 640px) {
   .contact-intro-heading {
     font-size: 3.75rem;
