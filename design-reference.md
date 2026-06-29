@@ -68,63 +68,56 @@ Extracted from the live Astro codebase (`site/src/styles/global.css`, components
 
 ---
 
-## Homepage hero (`.hero-home`)
+## Homepage hero (`.hero-home`) — **LOCKED**
 
-### Height
+**Do not change** banner asset, hero dimensions, image CSS, or hero text layout/sizes without explicit user approval.
 
-| Breakpoint | Min height |
-|------------|------------|
-| Default | `80vh` |
-| `min-width: 1024px` | `85vh` |
-| Fallback background color | `#123208` (forest-dark) |
+### Banner image (`.hero-home-bg`)
 
-### Hero image (`.hero-home-bg`)
-
-**Locked asset:** `assets/images/banner-home.jpg` (crew clearing branches; dark foliage on the left for hero text contrast). Do not replace without approval.
+**Locked asset:** `assets/images/photopea-home-banner-road-crew.jpg`
 
 | Property | Value |
 |----------|-------|
-| Position | `absolute inset-0`, `h-full w-full` |
+| Export size | **1920 × 688 px** (image area) |
+| Position | `absolute`; `inset: var(--banner-frame-size) 0` |
+| Size | `width: 100%`; `height: 100%` |
 | Object fit | `cover` |
 | Object position | `left center` |
 | Overlay | None |
 
-### Hero text container (`.hero-home-content`)
+**Composition:** Road crew + chipper truck on the right; dark foliage on the left for hero text contrast.
+
+### Hero container (`.hero-home`)
 
 | Property | Value |
 |----------|-------|
-| Position | `absolute inset-0`, `z-index: 2` |
-| Layout | flex; `align-items: center`; `justify-content: flex-start` |
-| Padding inline | `clamp(1.25rem, 6vw, 3rem)` |
+| Width | `100%` |
+| Aspect ratio | **`1920 / 700`** (688px image + 6px top/bottom frame via `--banner-frame-size`) |
+| Scales | Proportionally at all screen widths — same framing, no breakpoint height clamps |
+| Fallback background | `#1d7a20` (forest) |
+
+### Hero text container (`.page-hero-content` in `.hero-home`)
+
+Markup uses `site-container page-hero-content` (not `.hero-home-content`).
+
+| Property | Value |
+|----------|-------|
+| Position | `absolute`; `inset: 0` |
+| Layout | inherits `.page-hero-content` flex column; `justify-content: center` |
 | Padding block | `2.5rem` |
-| At `min-width: 901px` | `align-items: flex-start`; `padding-left: 520px`; `padding-right: 2rem`; `padding-top: 345px`; `padding-bottom: 2.5rem` |
-
-### Hero text block (`.hero-home-copy`)
-
-| Property | Value |
-|----------|-------|
-| Max width | `32rem` (default); `620px` at `1024px+` |
 
 ### Homepage hero text sizes
 
-Values below come from `.hero-home-copy` overrides (what the homepage actually renders).
-
 | Element | Default | `640px+` | `1024px+` | `1280px+` |
 |---------|---------|----------|-----------|-----------|
-| Eyebrow (`.hero-eyebrow`) | `0.9375rem`, margin-bottom `1rem` | — | `1.125rem`, margin-bottom `1.25rem` | — |
-| Heading (`.hero-heading-home`) | `3rem`, line-height `1.05`, color `#ffffff` | `3.875rem` | `5rem` | `5.75rem` |
-| Lead (`.hero-lead`) | `1.125rem`, margin-top `1.25rem`, color `#ffffff` | — | `1.3125rem`, margin-top `1.5rem` | — |
-| Tagline (`.hero-tagline`) | `1.1875rem`, margin-top `1rem`, color `#ffffff`, font-weight `700` | — | `1.375rem` | — |
+| Eyebrow (`.hero-eyebrow`) | `1.25rem` | — | `1.5rem` | — |
+| Heading (`.hero-heading-home`) | `3rem` | `3.875rem` | `5rem` | `5.75rem` |
+| Lead (`.hero-lead`) | `1.4375rem` | — | `1.6875rem` | — |
+| Tagline (`.hero-tagline`) | `1.5rem` | — | `1.75rem` | — |
 
-**Eyebrow styling (shared `.hero-eyebrow`):** font-weight `700`, letter-spacing `0.22em`, uppercase, color `#a7c441` (forest-light).
+Heading sizes use `.hero-home .hero-heading.hero-heading-home` (overrides shared `.hero-heading` rules).
 
-**Text shadows on homepage copy:**
-- Eyebrow: `0 1px 3px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.4)`
-- Heading: `0 2px 6px rgba(0,0,0,0.45), 0 10px 24px rgba(0,0,0,0.35)`
-- Lead: `0 1px 3px rgba(0,0,0,0.95), 0 2px 10px rgba(0,0,0,0.8), 0 4px 20px rgba(0,0,0,0.6)`
-- Tagline: `0 1px 3px rgba(0,0,0,0.6), 0 4px 14px rgba(0,0,0,0.45)`
-
-### Homepage hero buttons (`.hero-home-copy .hero-actions`)
+### Homepage hero buttons (`.hero-actions`)
 
 | Property | Value |
 |----------|-------|
@@ -132,28 +125,11 @@ Values below come from `.hero-home-copy` overrides (what the homepage actually r
 | Gap | `1rem` (default); `1.125rem` at `1024px+` |
 | Margin top | `2.5rem` (default); `3rem` at `1024px+` |
 
-**Primary (`.btn-hero-primary`) in hero copy:**
+**Primary (`.btn-hero-primary`):** accent orange `#ff9500`; padding `1.125rem 2rem`; font-size `1.625rem` ( `1.875rem` at `1024px+` ).
 
-| Property | Default | `1024px+` |
-|----------|---------|-----------|
-| Padding | `1.125rem 2rem` | `1.25rem 2.25rem` |
-| Font size | `1.25rem` | `1.5rem` |
-| Font weight | `700` | `700` |
-| Border radius | `0.5rem` | `0.5rem` |
-| Background | `#ff9500` (accent) | same |
-| Box shadow | `0 8px 24px rgb(0 0 0 / 0.22)` | same |
+**Secondary (`.btn-hero-secondary`):** transparent dark bg; white border; font-size `1.625rem` ( `1.875rem` at `1024px+` ).
 
-**Secondary (`.btn-hero-secondary`) in hero copy:**
-
-| Property | Value |
-|----------|-------|
-| Padding | `1.125rem 2rem` (default); `1.25rem 2.25rem` at `1024px+` |
-| Font size | `1.25rem` (default); `1.5rem` at `1024px+` |
-| Font weight | `800` |
-| Background | `rgba(0, 0, 0, 0.35)`; hover `rgba(0, 0, 0, 0.45)` |
-| Border | `2px solid rgba(255, 255, 255, 0.9)`; hover `#ffffff` |
-| Border radius | `0.5rem` |
-| Color | `#ffffff` |
+**Hidden on homepage:** `.hero-cell-link` (`display: none`).
 
 ---
 
@@ -366,6 +342,6 @@ Values below come from `.hero-home-copy` overrides (what the homepage actually r
 
 ## Notes
 
-- Homepage hero text uses **fixed pixel positioning** at `901px+` (`padding-left: 520px`, `padding-top: 345px`) — not purely flex-centered at desktop.
+- Homepage hero is **locked** — see [Homepage hero](#homepage-hero-hero-home--locked). Asset: `photopea-home-banner-road-crew.jpg` at 1920×688; container `aspect-ratio: 1920 / 700`.
 - `.hero-cell-link` is `display: none` on homepage (markup present but hidden).
 - Inner pages use `.site-container-page` (`1320px` max); homepage sections use full `1920px` container.

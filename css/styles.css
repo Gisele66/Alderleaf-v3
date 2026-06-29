@@ -538,29 +538,22 @@ h4 {
   transform: translateY(-1px);
 }
 
+/* Homepage hero — LOCKED. See design-reference.md. Do not change without user approval. */
 .hero-home {
   position: relative;
   overflow: hidden;
-  min-height: clamp(24rem, 55vh, 43.75rem);
+  width: 100%;
+  aspect-ratio: 1920 / 700;
   background-color: var(--color-forest);
-}
-
-@media (min-width: 1024px) {
-  .hero-home {
-    min-height: clamp(28rem, 36.458vw, 43.75rem);
-  }
 }
 
 .hero-home-bg {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: var(--banner-frame-size);
-  bottom: var(--banner-frame-size);
+  inset: var(--banner-frame-size) 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  object-position: 18% center;
+  object-position: left center;
 }
 
 .hero-home-content {
@@ -1779,6 +1772,30 @@ button.service-item-modal:focus-visible {
   }
 }
 
+.hero-home .hero-heading.hero-heading-home {
+  max-width: none;
+  font-size: 3rem;
+  line-height: 1.05;
+}
+
+@media (min-width: 640px) {
+  .hero-home .hero-heading.hero-heading-home {
+    font-size: 3.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-home .hero-heading.hero-heading-home {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-home .hero-heading.hero-heading-home {
+    font-size: 5.75rem;
+  }
+}
+
 .page-hero-content {
   position: relative;
   z-index: 2;
@@ -1791,7 +1808,9 @@ button.service-item-modal:focus-visible {
 }
 
 .hero-home .page-hero-content {
-  min-height: clamp(24rem, 55vh, 43.75rem);
+  position: absolute;
+  inset: 0;
+  min-height: 0;
   padding-block: 2.5rem;
 }
 
@@ -1806,11 +1825,6 @@ button.service-item-modal:focus-visible {
   .page-hero-content {
     min-height: 44rem;
     padding-block: 6rem;
-  }
-
-  .hero-home .page-hero-content {
-    min-height: clamp(28rem, 36.458vw, 43.75rem);
-    padding-block: 3rem;
   }
 }
 
