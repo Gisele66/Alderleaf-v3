@@ -1720,7 +1720,11 @@ button.service-item-modal:focus-visible {
 }
 
 .page-hero-bg--about {
-  object-position: 48% 88%;
+  top: var(--banner-frame-size);
+  bottom: var(--banner-frame-size);
+  height: calc(100% - (2 * var(--banner-frame-size)));
+  object-fit: cover;
+  object-position: 48% bottom;
 }
 
 .page-hero-bg--services,
