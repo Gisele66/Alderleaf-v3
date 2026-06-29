@@ -314,7 +314,7 @@ Scoped in CSS via `.page-hero:has(> img[src$="photopea-banner-chainsaw.jpg"])`.
 | Section | `.contact-page-intro.section-py-contact-intro` |
 | Desktop background | Same gradient as mobile (see `.contact-page-intro` in CSS) |
 | Divider line under heading | **None** |
-| Bottom stripe | `::after` **3px** (matches `#site-header` border), all breakpoints |
+| Bottom stripe | `border-bottom` **3px solid** forest (same property as `#site-header` border), all breakpoints |
 | Mobile only (`max-width: 639px`) | Heading `1.625rem`, `text-wrap: balance`, tighter padding |
 
 ---

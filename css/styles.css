@@ -558,6 +558,13 @@ h4 {
   bottom: 0;
 }
 
+@media (min-width: 1024px) {
+  .hero-home-bg {
+    bottom: 0;
+    height: calc(100% - var(--banner-frame-size));
+  }
+}
+
 .hero-home-bg {
   position: absolute;
   top: var(--banner-frame-size);
@@ -1994,16 +2001,7 @@ button.service-item-modal:focus-visible {
     rgb(167 196 65 / 0.11) 42%,
     var(--color-cream) 88%
   );
-}
-
-.contact-page-intro::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 3px;
-  background-color: var(--color-forest);
+  border-bottom: 3px solid var(--color-forest);
 }
 
 @media (min-width: 640px) {
