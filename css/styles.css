@@ -1778,7 +1778,15 @@ button.service-item-modal:focus-visible {
 }
 
 .page-hero-bg--gallery {
-  object-position: 58% center;
+  object-position: 72% center;
+}
+
+/* Gallery page banner — LOCKED. See design-reference.md. Do not change without user approval. */
+.page-hero:has(> img[src$="photopea-banner-chainsaw.jpg"]) .page-hero-bg {
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: 72% center;
 }
 
 .page-hero-bg--chips {

@@ -290,6 +290,21 @@ Scoped in CSS via `.page-hero:has(> img[src$="banner-services.jpg"])`.
 
 ---
 
+## Gallery page hero — locked
+
+**Gallery page only. Do not change without approval.**
+
+| Property | Value |
+|----------|-------|
+| Banner image | `assets/images/photopea-banner-chainsaw.jpg` (1920×688) |
+| Image fit | `inset: 0`; `height: 100%`; `object-fit: cover`; `object-position: 72% center` |
+| Frame stripes | Same as all `.page-hero` pages |
+| Overlay | None |
+
+Scoped in CSS via `.page-hero:has(> img[src$="photopea-banner-chainsaw.jpg"])`.
+
+---
+
 ## Services page cards + modals — locked (services page only)
 
 | Property | Value |
