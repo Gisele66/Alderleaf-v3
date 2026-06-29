@@ -305,6 +305,31 @@ Scoped in CSS via `.page-hero:has(> img[src$="photopea-banner-chainsaw.jpg"])`.
 
 ---
 
+## Contact page intro — locked
+
+**Contact page only (`contact.html`). Do not change without approval.**
+
+| Property | Value |
+|----------|-------|
+| Section | `.contact-page-intro.section-py-contact-intro` |
+| Desktop background | Cream + soft forest gradient (see `.contact-page-intro` in CSS) |
+| Divider line under heading | **None** |
+| Mobile only (`max-width: 639px`) | Heading `1.625rem`, `text-wrap: balance`, tighter padding; gradient fades to cream; bottom stripe `::after` **3px** (matches `#site-header` border) |
+
+---
+
+## Mobile popup close buttons — locked
+
+**Mobile only (`max-width: 1023px`). Do not change without approval.**
+
+| Property | Value |
+|----------|-------|
+| Scope | `.service-modal-close`, `.review-modal-close`, `.gallery-lightbox-close` |
+| Placement | Extra dialog top padding; × sits above content, not on images |
+| Style | Plain ×, no button chrome (`appearance: none`, transparent background) |
+
+---
+
 ## Services page cards + modals — locked (services page only)
 
 | Property | Value |

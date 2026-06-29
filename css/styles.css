@@ -2657,11 +2657,12 @@ button.gallery-card:focus-visible {
     max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    padding-top: 3.75rem;
   }
 
   .gallery-lightbox-dialog {
     max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-    padding-top: 2.75rem;
+    padding-top: 3.25rem;
   }
 
   .review-modal-title,
@@ -2669,6 +2670,7 @@ button.gallery-card:focus-visible {
     padding-right: 2.75rem;
   }
 
+  /* Mobile popup close — LOCKED. Do not change without user approval. */
   .service-modal-close,
   .review-modal-close,
   .gallery-lightbox-close {
@@ -2687,13 +2689,13 @@ button.gallery-card:focus-visible {
 
   .service-modal-close,
   .review-modal-close {
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 0.625rem;
+    right: 0.625rem;
   }
 
   .gallery-lightbox-close {
-    top: 0;
-    right: 0;
+    top: 0.5rem;
+    right: 0.5rem;
     font-size: 1.75rem;
   }
 
@@ -2838,5 +2840,36 @@ button.gallery-card:focus-visible {
 
   .contact-block a {
     font-size: 1.125rem;
+  }
+
+  /* Contact page intro — LOCKED mobile. See design-reference.md. */
+  .contact-page-intro.section-py-contact-intro {
+    position: relative;
+    padding-block: 1.5rem 1.25rem;
+    background-color: var(--color-cream);
+    background-image: linear-gradient(
+      180deg,
+      rgb(29 122 32 / 0.2) 0%,
+      rgb(167 196 65 / 0.11) 42%,
+      var(--color-cream) 88%
+    );
+  }
+
+  .contact-page-intro::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: var(--color-forest);
+  }
+
+  .contact-page-intro .contact-intro-heading {
+    font-size: 1.625rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    max-width: 16.5rem;
   }
 }
