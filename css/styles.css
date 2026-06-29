@@ -1736,6 +1736,10 @@ button.service-item-modal:focus-visible {
   object-position: 85% center;
 }
 
+.page-hero-bg--gallery {
+  object-position: 58% center;
+}
+
 .page-hero-bg--chips {
   object-position: center 62%;
 }

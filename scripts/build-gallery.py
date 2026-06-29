@@ -36,7 +36,7 @@ GALLERY = [
     ("Lawn-Care.jpg", 0.5, 0.5),
     ("lawn-sprinklers.jpg", 0.5, 0.55),
     ("Property-maintenance2.jpg", 0.5, 0.45),
-    ("Tree-Removal-2.jpg", 0.5, 0.4, {"brightness": 1.75, "contrast": 1.15, "color": 1.08}),
+    ("Tree-Removal-2.jpg", 0.5, 0.4),
     ("tree-work-yard.jpg", 0.5, 0.5),
     ("tree_removal-1.jpg", 0.5, 0.4),
     ("Truck-pic-rear-2.jpg", 0.5, 0.55),
