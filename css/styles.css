@@ -1984,14 +1984,26 @@ button.service-item-modal:focus-visible {
   font-weight: 400;
 }
 
+/* Contact page intro — LOCKED. See design-reference.md. Do not change without user approval. */
 .contact-page-intro {
+  position: relative;
   background-color: var(--color-cream);
   background-image: linear-gradient(
     180deg,
-    rgb(29 122 32 / 0.14) 0%,
-    rgb(167 196 65 / 0.08) 32%,
-    var(--color-cream) 100%
+    rgb(29 122 32 / 0.2) 0%,
+    rgb(167 196 65 / 0.11) 42%,
+    var(--color-cream) 88%
   );
+}
+
+.contact-page-intro::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: var(--color-forest);
 }
 
 @media (min-width: 640px) {
@@ -2844,25 +2856,7 @@ button.gallery-card:focus-visible {
 
   /* Contact page intro — LOCKED mobile. See design-reference.md. */
   .contact-page-intro.section-py-contact-intro {
-    position: relative;
     padding-block: 1.5rem 1.25rem;
-    background-color: var(--color-cream);
-    background-image: linear-gradient(
-      180deg,
-      rgb(29 122 32 / 0.2) 0%,
-      rgb(167 196 65 / 0.11) 42%,
-      var(--color-cream) 88%
-    );
-  }
-
-  .contact-page-intro::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    background-color: var(--color-forest);
   }
 
   .contact-page-intro .contact-intro-heading {

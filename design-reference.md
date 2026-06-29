@@ -214,7 +214,7 @@ Heading sizes use `.hero-home .hero-heading.hero-heading-home` (overrides shared
 | Column | Content |
 |--------|---------|
 | 1 | Jane D. — *"Great Job Guys"* — 5 stars — real client review |
-| 2 | Featured slot — latest submitted review from `localStorage`, or Gisele LaRose placeholder |
+| 2 | Featured slot — latest submitted review from `localStorage`, or G. LaRose — *"Exceptional work!"* (static default) |
 | 3 | CTA — *Share Your Experience* — **Leave a Review** (`.btn-review-open`) |
 
 ### All reviews page (`reviews.html`)
@@ -312,9 +312,10 @@ Scoped in CSS via `.page-hero:has(> img[src$="photopea-banner-chainsaw.jpg"])`.
 | Property | Value |
 |----------|-------|
 | Section | `.contact-page-intro.section-py-contact-intro` |
-| Desktop background | Cream + soft forest gradient (see `.contact-page-intro` in CSS) |
+| Desktop background | Same gradient as mobile (see `.contact-page-intro` in CSS) |
 | Divider line under heading | **None** |
-| Mobile only (`max-width: 639px`) | Heading `1.625rem`, `text-wrap: balance`, tighter padding; gradient fades to cream; bottom stripe `::after` **3px** (matches `#site-header` border) |
+| Bottom stripe | `::after` **3px** (matches `#site-header` border), all breakpoints |
+| Mobile only (`max-width: 639px`) | Heading `1.625rem`, `text-wrap: balance`, tighter padding |
 
 ---
 

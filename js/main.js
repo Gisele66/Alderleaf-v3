@@ -32,16 +32,14 @@
       title: 'Great Job Guys',
       rating: 5,
       comment: 'Chris and his team did a fantastic job removing our backyard trees. They showed up on time, worked hard and left our yard cleaner than when they started.'
+    },
+    {
+      name: 'G. LaRose',
+      title: 'Exceptional work!',
+      rating: 5,
+      comment: 'Chris does the kinds of jobs others won\'t attempt. He shows up, is professional and with all the right equipment to get the job done. I\'m always super happy after he works his magic, I highly recommend!'
     }
   ];
-
-  var placeholderReview = {
-    name: 'Gisele LaRose',
-    title: 'Placeholder Review',
-    rating: 5,
-    comment: 'Review text coming soon.',
-    placeholder: true
-  };
 
   var reviewModal = document.getElementById('review-modal');
   var reviewForm = document.getElementById('review-form');
@@ -115,7 +113,7 @@
   }
 
   function getHomepageFeaturedReview() {
-    return getLatestSubmittedReview() || placeholderReview;
+    return getLatestSubmittedReview() || staticReviews[1];
   }
 
   function getAllDisplayReviews() {
