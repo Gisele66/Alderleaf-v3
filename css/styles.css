@@ -2514,15 +2514,63 @@ button.gallery-card:focus-visible {
 
   .hero-home {
     aspect-ratio: auto;
+    background-color: var(--color-cream);
+  }
+
+  .hero-home-bg {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920 / 700;
+    min-height: 11rem;
+    max-height: 36vh;
+    object-fit: cover;
+    object-position: left center;
   }
 
   .hero-home .page-hero-content {
     position: relative;
     inset: auto;
-    min-height: clamp(28rem, 135vw, 38rem);
-    justify-content: center;
-    padding-block: 1.75rem;
+    min-height: 0;
+    margin-top: 0;
+    padding-block: 1.75rem 2rem;
+    background-color: var(--color-cream);
+    justify-content: flex-start;
     z-index: 2;
+  }
+
+  .hero-home .page-hero-content::before {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 3px;
+    margin-bottom: 1.25rem;
+    background-color: var(--color-forest);
+  }
+
+  #main .hero-home .hero-heading,
+  #main .hero-home .hero-heading-home {
+    color: var(--color-ink);
+    text-shadow: none;
+  }
+
+  #main .hero-home .hero-eyebrow {
+    color: var(--color-forest);
+    text-shadow: none;
+  }
+
+  #main .hero-home .hero-lead {
+    color: var(--color-body);
+    font-weight: 500;
+    text-shadow: none;
+  }
+
+  #main .hero-home .hero-tagline {
+    color: var(--color-forest-dark);
+    text-shadow: none;
   }
 
   .hero-home .hero-heading.hero-heading-home {
@@ -2550,6 +2598,18 @@ button.gallery-card:focus-visible {
     padding: 0.875rem 1.25rem;
   }
 
+  .hero-home .btn-hero-secondary {
+    border-color: var(--color-forest);
+    background-color: var(--color-forest);
+    color: #ffffff;
+    text-shadow: none;
+  }
+
+  .hero-home .btn-hero-secondary:hover {
+    background-color: var(--color-forest-dark);
+    border-color: var(--color-forest-dark);
+  }
+
   .page-hero {
     min-height: 20rem;
   }
@@ -2566,6 +2626,71 @@ button.gallery-card:focus-visible {
 
   .page-hero-content .hero-lead {
     font-size: 1.0625rem;
+  }
+
+  .service-modal,
+  .review-modal,
+  .gallery-lightbox {
+    align-items: flex-start;
+    justify-content: center;
+    padding:
+      max(1rem, env(safe-area-inset-top))
+      max(1rem, env(safe-area-inset-right))
+      max(1rem, env(safe-area-inset-bottom))
+      max(1rem, env(safe-area-inset-left));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-modal-dialog,
+  .review-modal-dialog {
+    max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery-lightbox-dialog {
+    max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    padding-top: 2.75rem;
+  }
+
+  .review-modal-title,
+  .service-modal-title {
+    padding-right: 2.75rem;
+  }
+
+  .service-modal-close,
+  .review-modal-close,
+  .gallery-lightbox-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .service-modal-close,
+  .review-modal-close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .gallery-lightbox-close {
+    top: 0;
+    right: 0;
+    font-size: 1.75rem;
+  }
+
+  .service-modal-close:focus,
+  .review-modal-close:focus,
+  .gallery-lightbox-close:focus {
+    outline: none;
   }
 }
 
@@ -2604,8 +2729,7 @@ button.gallery-card:focus-visible {
   }
 
   .hero-home .page-hero-content {
-    min-height: clamp(32rem, 155vw, 42rem);
-    padding-block: 1.5rem;
+    padding-block: 1.5rem 1.75rem;
   }
 
   .hero-home .hero-heading.hero-heading-home {
