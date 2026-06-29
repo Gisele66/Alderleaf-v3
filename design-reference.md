@@ -307,14 +307,15 @@ Scoped in CSS via `.page-hero:has(> img[src$="photopea-banner-chainsaw.jpg"])`.
 
 ## Contact page intro — locked
 
-**Contact page only (`contact.html`). Do not change without approval.**
+**Contact page only (`contact.html`, `body.page-contact`). Do not change without approval.**
 
 | Property | Value |
 |----------|-------|
 | Section | `.contact-page-intro.section-py-contact-intro` |
 | Desktop background | Same gradient as mobile (see `.contact-page-intro` in CSS) |
 | Divider line under heading | **None** |
-| Bottom stripe | `border-bottom` **3px solid** forest (same property as `#site-header` border), all breakpoints |
+| Desktop stripes | Header `border-bottom` **1px**; intro `border-bottom` **1px** forest |
+| Mobile only (`max-width: 1023px`) | Header border **none**; intro `border-top` + `border-bottom` **1px** (`--banner-frame-size`); gradient starts on cream at 0% |
 | Mobile only (`max-width: 639px`) | Heading `1.625rem`, `text-wrap: balance`, tighter padding |
 
 ---
@@ -344,14 +345,17 @@ Scoped in CSS via `.page-hero:has(> img[src$="photopea-banner-chainsaw.jpg"])`.
 
 ---
 
-## About page column layout
+## About page column layout — locked
+
+**About page only (`about.html`). Do not change without approval.**
 
 | Property | Value |
 |----------|-------|
-| Section padding | `py-20 lg:py-28` |
-| Grid | `grid items-start gap-12 lg:grid-cols-[3fr_2fr] lg:gap-20` |
-| Left column | Prose text + signature image (`mt-8 h-16 w-auto`) |
-| Right column | Full-width image, `rounded-2xl shadow-xl` |
+| Section | `.about-page-section` with `.about-page-grid` |
+| Grid (1024px+) | Two equal columns (`1fr 1fr`), `gap: 6rem`, `align-items: center` |
+| Left column | Six prose paragraphs + signature block (`.about-page-signature`) |
+| Paragraph spacing | `.about-page-copy p + p` → `0.875rem` |
+| Right column | `.about-photo` — full-width, `rounded-2xl`, shadow |
 | Page hero (above content) | `.page-hero` min-height `28rem` → `36rem` (768px+) → `44rem` (1024px+); see [About page hero — locked](#about-page-hero--locked) |
 
 ---
