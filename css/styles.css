@@ -1980,6 +1980,7 @@ button.service-item-modal:focus-visible {
 
   .contact-stack {
     grid-column: 1;
+    align-self: start;
   }
 
   .contact-photo-wrap {
@@ -2041,7 +2042,15 @@ button.service-item-modal:focus-visible {
 .contact-stack {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+.contact-stack .btn-contact-quote {
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
 }
 
 .payment-box {
@@ -2697,6 +2706,18 @@ button.gallery-card:focus-visible {
       rgb(167 196 65 / 0.11) 42%,
       var(--color-cream) 88%
     );
+  }
+
+  body.page-contact .contact-stack {
+    gap: 1.5rem;
+  }
+
+  body.page-contact .contact-stack .btn-contact-quote {
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
   }
 
   .service-modal,
