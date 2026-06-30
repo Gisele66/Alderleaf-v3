@@ -2503,6 +2503,22 @@ button.gallery-card:focus-visible {
   color: var(--color-accent);
 }
 
+@media (min-width: 1024px) {
+  .service-modal-close:focus,
+  .review-modal-close:focus,
+  .gallery-lightbox-close:focus {
+    outline: none;
+  }
+
+  .service-modal-close:focus-visible,
+  .review-modal-close:focus-visible,
+  .gallery-lightbox-close:focus-visible {
+    outline: 2px solid var(--color-forest);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+}
+
 .gallery-lightbox-image {
   display: block;
   width: 100%;

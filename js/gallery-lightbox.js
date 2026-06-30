@@ -19,7 +19,7 @@
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
     var closeBtn = lightbox.querySelector('.gallery-lightbox-close');
-    if (closeBtn) closeBtn.focus();
+    if (closeBtn) closeBtn.focus({ focusVisible: false });
   }
 
   function closeLightbox() {

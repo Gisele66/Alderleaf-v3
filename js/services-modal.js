@@ -94,7 +94,7 @@
     serviceModal.hidden = false;
     document.body.style.overflow = 'hidden';
     var closeBtn = serviceModal.querySelector('.service-modal-close');
-    if (closeBtn) closeBtn.focus();
+    if (closeBtn) closeBtn.focus({ focusVisible: false });
   }
 
   function closeServiceModal() {
