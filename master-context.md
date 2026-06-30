@@ -4,6 +4,69 @@
 
 **Version:** 3 — experimental sandbox. Stable baseline lives in `Alderleaf-v2`. See `VERSION.md`.
 
+## New to this? Start here
+
+This section is for you if you are learning to work with Cursor (the AI editor) on this website. Use plain steps; ignore jargon until you need it.
+
+### What the main files are
+
+| File or folder | What it is |
+|----------------|------------|
+| `index.html` | Home page |
+| `about.html`, `services.html`, `gallery.html`, `quote.html`, `contact.html` | Other pages — **one file per page** |
+| `css/styles.css` | Shared styles — changes here can affect **many pages at once** |
+| `assets/images/` | Photos and logos |
+| `design-reference.md` | Notes on how things should look; some parts say **LOCKED** (do not change without saying so) |
+| `master-context.md` | Full project rules (this file) |
+| `.cursor/rules/` | Short rules Cursor reads automatically every time you chat |
+
+**Stable backup:** If v3 gets messy, `Alderleaf-v2` on GitHub is the last known-good copy.
+
+### Baby steps — asking for one change
+
+1. **Pick one thing** — e.g. "About page banner" not "fix all banners."
+2. **Open chat in Cursor** and describe it in plain English.
+3. **Add scope** (copy this and change the page name):
+
+   > Scope: `about.html` only. Do not change other pages, the menu, the footer, or shared banner CSS.
+
+4. **Send one request.** Wait for the answer. Open the site in your browser and check **that page only**.
+5. **Happy?** Move to the next task in a **new message**. **Not happy?** Say what still looks wrong — on which page — before asking for something else.
+
+### Baby steps — checking after the agent works
+
+1. Refresh the page you cared about in the browser.
+2. Click through **one or two other pages** you did **not** ask to change — they should look the same as before.
+3. If something else changed, say: "You changed [page/section] but I only asked for [X]. Please undo that."
+
+### Baby steps — if the wrong things changed (undo)
+
+You do not have to fix the code yourself. In chat you can say:
+
+> "Revert everything except `about.html`" (use your actual page name)
+
+Or ask the agent to use git to put files back. **Uncommitted changes** can often be undone file by file. If you are unsure, say: "I only wanted About changed — please help me undo the rest."
+
+### Words you might see
+
+| Term | Plain meaning |
+|------|----------------|
+| **Scope** | Which files/pages are allowed to change |
+| **Drift** | The site changing in places you did not ask about |
+| **Shared CSS** | Styles in `styles.css` used on more than one page |
+| **LOCKED** | That design is finished — do not change unless you name it |
+| **HTML file** | One page of the website |
+
+### For the agent — every task in order
+
+1. Read what the user asked and any **Scope** line.
+2. Check `design-reference.md` if the task touches a banner or layout.
+3. Say which files you will edit **before** editing (see `change-control.mdc`).
+4. Make the **smallest** change that fixes the one request.
+5. Stop. Say which file(s) changed and what you did. Do not start the next job.
+
+---
+
 ## Project Direction
 
 This is a fresh rebuild of the Alderleaf website.
@@ -37,6 +100,14 @@ If something is unclear, stop and ask one short question before changing anythin
 ## Workflow Rules
 
 Work one task at a time.
+
+**Step-by-step for each task:**
+
+1. Read the user's message — especially any **Scope** line (which page/file is allowed).
+2. Decide which **one** problem you are solving; do not add extra fixes.
+3. List the file(s) you will touch **before** you edit them.
+4. Make the smallest change that solves that one problem.
+5. Stop. Tell the user what changed. Do not continue to the next problem unless they ask.
 
 Before changing files, identify the exact task being done.
 
@@ -109,6 +180,10 @@ Suggested structure:
 
 ## Strict Change Control
 
+**Enforced in every session:** `.cursor/rules/change-control.mdc` (file allowlist, shared CSS protection, LOCKED sections, pre-flight declaration). Read it before editing.
+
+**Locked design:** `design-reference.md` — sections marked **LOCKED** must not change unless the user names that section in the request. **Header & desktop nav are LOCKED** (June 2026).
+
 Do not change:
 
 * Text content unless asked
@@ -118,9 +193,9 @@ Do not change:
 * Gradients, tints, or overlays unless asked
 * Fonts unless asked
 * Layout widths unless asked
-* Header unless asked
+* Header unless asked — **LOCKED** (logo, nav, CTA, mobile menu; see `design-reference.md`)
 * Footer unless asked
-* Navigation unless asked
+* Navigation unless asked — **LOCKED** (part of header; see `design-reference.md`)
 * Mobile layout unless asked
 * File names unless asked
 * Folder structure unless asked
@@ -180,7 +255,7 @@ Images must not create horizontal scrolling.
 
 ## Communication Rules
 
-Keep responses short.
+Keep responses short and in **plain language** unless the user asks for technical detail.
 
 Do not give long explanations unless asked.
 
@@ -190,9 +265,11 @@ Do not suggest future tasks unless asked.
 
 After making a change, report only:
 
-* what file changed
-* what was changed
-* whether the requested issue is fixed
+* which file(s) changed (use plain page names too, e.g. "About page — `about.html`")
+* what you changed, in simple terms
+* whether the thing they asked for is fixed
+
+If you are about to touch more than one page or shared CSS, say so first and wait if the rules require it.
 
 ## Approval Rules
 

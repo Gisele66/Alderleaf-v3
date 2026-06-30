@@ -5,9 +5,15 @@ Extracted from the live Astro codebase (`site/src/styles/global.css`, components
 **Source repo:** https://github.com/Gisele66/alderleaf  
 **Primary files:** `site/src/styles/global.css`, `site/src/components/Header.astro`, `site/src/pages/index.astro`, `site/src/pages/about.astro`, `site/src/pages/contact.astro`
 
+**For you (plain language):** This file records how parts of the site should look. Sections marked **LOCKED** are finished — tell the agent the exact section name if you want to change one (e.g. "change the About page hero"). See **New to this? Start here** in `master-context.md` for how to ask safely.
+
 ---
 
-## Header
+## Header & desktop nav — **LOCKED**
+
+**Do not change** `#site-header`, logo, desktop nav, mobile menu, header CTA, or related CSS unless the user **explicitly names the header or nav** in the request.
+
+Locked June 2026 after logo stability fix (preload, header-sized asset, critical inline logo CSS, no drop-shadow box).
 
 | Property | Value |
 |----------|-------|
@@ -17,21 +23,25 @@ Extracted from the live Astro codebase (`site/src/styles/global.css`, components
 | Column gap | `0.875rem` (default); `1.5rem` at `min-width: 1024px` |
 | Row gap | `0.75rem` |
 | Background | `#ffffff` |
-| Bottom border | `3px solid` forest (`#1d7a20`) |
+| Bottom border | `3px solid` forest (`#1d7a20`) — hidden when banner page follows (see CSS `:has` rules) |
 | Box shadow | `0 4px 24px rgba(18, 50, 8, 0.12)` |
 | Position | `sticky top-0 z-40` |
 | Container horizontal padding | See **Main content max-width** (header uses `.site-container.site-header-grid` with asymmetric padding) |
 
-### Logo
+### Logo (`.site-header-logo` / `.site-logo`) — locked
 
 | Property | Value |
 |----------|-------|
-| Display height | `4.75rem` (default); `5.5rem` at `640px+`; `8rem` at `1024px+` |
-| Width | `auto` |
-| HTML `width` / `height` attrs | `250` / `85` |
-| Filter | `drop-shadow(0 0 0.75px rgba(29, 122, 32, 0.45))` |
+| Asset | `assets/images/logo/alderleaf-logo-color-header.png` (header-optimized; full-size `alderleaf-logo-color.png` unchanged) |
+| Preload | `<link rel="preload" as="image" href="…alderleaf-logo-color-header.png" fetchpriority="high">` in every live page `<head>` |
+| Critical inline CSS | Logo sizing block in `<head>` on every live page (before Tailwind) |
+| Display height | `4.75rem` (default); `5.5rem` at `640px+`; `8rem` at `1024px+`; `3.25rem` mobile |
+| Width | `calc(height * 250 / 85)` with `aspect-ratio: 250 / 85` |
+| Image attrs | `width="754"` `height="256"` `decoding="sync"` `fetchpriority="high"` `alt=""` (link has `aria-label="Alderleaf home"`) |
+| Filter | **None** — do not re-add drop-shadow (caused pale green box) |
+| Markup | Same `#site-header` block on all live pages — do not sync-edit unless user asks for global nav change |
 
-### Nav spacing & typography
+### Nav spacing & typography — locked
 
 | Property | Value |
 |----------|-------|

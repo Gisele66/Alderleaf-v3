@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .site-header-logo{display:block;line-height:0;flex-shrink:0}
+    .site-logo{display:block;object-fit:contain;aspect-ratio:250/85;height:4.75rem;width:calc(4.75rem*250/85)}
+    @media (min-width:640px){.site-logo{height:5.5rem;width:calc(5.5rem*250/85)}}
+    @media (min-width:1024px){.site-logo{height:8rem;width:calc(8rem*250/85)}}
+    @media (max-width:1023px){.site-logo{height:3.25rem;width:calc(3.25rem*250/85)}}
+  </style>
   <title>Alderleaf — Land and Tree Services | Haida Gwaii</title>
   <meta name="description" content="Alderleaf Land and Tree Services — professional tree removal, land clearing, pruning, and property maintenance on Haida Gwaii.">
   <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+  <link rel="preload" as="image" href="assets/images/logo/alderleaf-logo-color-header.png" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/photopea-home-banner-road-crew.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -30,8 +39,8 @@
 
   <header id="site-header">
     <div class="site-container site-header-grid">
-      <a href="index.html" class="site-header-logo shrink-0" aria-label="Alderleaf home">
-        <img src="assets/images/logo/alderleaf-logo-color.png" alt="Alderleaf" class="site-logo" width="250" height="85">
+      <a href="index.html" class="site-header-logo" aria-label="Alderleaf home">
+        <img src="assets/images/logo/alderleaf-logo-color-header.png" alt="" class="site-logo" width="754" height="256" decoding="sync" fetchpriority="high">
       </a>
       <nav class="site-nav site-header-nav" aria-label="Main navigation">
         <a href="index.html" class="nav-link nav-link-active">Home</a>
@@ -80,14 +89,14 @@
   </header>
 
   <main id="main" class="flex-1">
-    <section class="hero-home">
+    <section class="hero-home hero-home--banner">
       <img
         src="assets/images/photopea-home-banner-road-crew.jpg"
         alt="Alderleaf crew clearing branches on Haida Gwaii"
         class="hero-home-bg"
         loading="eager"
         fetchpriority="high"
-        decoding="async"
+        decoding="sync"
       >
       <div class="site-container page-hero-content">
         <p class="hero-eyebrow">Haida Gwaii, BC</p>

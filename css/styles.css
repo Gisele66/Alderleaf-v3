@@ -267,6 +267,9 @@ h4 {
 
 .site-header-logo {
   justify-self: start;
+  flex-shrink: 0;
+  display: block;
+  line-height: 0;
 }
 
 .site-header-nav {
@@ -447,20 +450,24 @@ h4 {
 }
 
 .site-logo {
+  display: block;
   height: 4.75rem;
-  width: auto;
-  filter: drop-shadow(0 0 0.75px rgba(29, 122, 32, 0.45));
+  width: calc(4.75rem * 250 / 85);
+  aspect-ratio: 250 / 85;
+  object-fit: contain;
 }
 
 @media (min-width: 640px) {
   .site-logo {
     height: 5.5rem;
+    width: calc(5.5rem * 250 / 85);
   }
 }
 
 @media (min-width: 1024px) {
   .site-logo {
     height: 8rem;
+    width: calc(8rem * 250 / 85);
   }
 }
 
@@ -576,6 +583,7 @@ h4 {
   bottom: var(--banner-frame-size);
   left: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: left center;
   z-index: 0;
@@ -1694,9 +1702,86 @@ button.service-item-modal:focus-visible {
   top: var(--banner-frame-size);
   bottom: var(--banner-frame-size);
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   z-index: 0;
+}
+
+/* Banner photo on section — paints from preload/cache while img decodes */
+.page-hero--banner-services {
+  background-image: url("../assets/images/banner-services.jpg");
+  background-size: cover;
+  background-position: 74% 50%;
+  background-repeat: no-repeat;
+}
+
+.page-hero--banner-about {
+  background-image: url("../assets/images/IMG_2003.jpg");
+  background-size: cover;
+  background-position: 48% bottom;
+  background-repeat: no-repeat;
+}
+
+.page-hero--banner-gallery {
+  background-image: url("../assets/images/photopea-banner-chainsaw.jpg");
+  background-size: cover;
+  background-position: 72% center;
+  background-repeat: no-repeat;
+}
+
+.page-hero--banner-quote {
+  background-image: url("../assets/images/IMG_2003.jpg");
+  background-size: cover;
+  background-position: 52% 65%;
+  background-repeat: no-repeat;
+}
+
+/* Inner page banner imgs — identical framing */
+.page-hero--banner-services .page-hero-bg,
+.page-hero--banner-about .page-hero-bg,
+.page-hero--banner-gallery .page-hero-bg,
+.page-hero--banner-quote .page-hero-bg {
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-hero--banner-services .page-hero-bg {
+  object-position: 74% 50%;
+  background-image: url("../assets/images/banner-services.jpg");
+  background-position: 74% 50%;
+}
+
+.page-hero--banner-about .page-hero-bg {
+  object-position: 48% bottom;
+  background-image: url("../assets/images/IMG_2003.jpg");
+  background-position: 48% bottom;
+}
+
+.page-hero--banner-gallery .page-hero-bg {
+  object-position: 72% center;
+  background-image: url("../assets/images/photopea-banner-chainsaw.jpg");
+  background-position: 72% center;
+}
+
+.page-hero--banner-quote .page-hero-bg {
+  object-position: 52% 65%;
+  background-image: url("../assets/images/IMG_2003.jpg");
+  background-position: 52% 65%;
+}
+
+.hero-home--banner {
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .hero-home--banner {
+    background-image: url("../assets/images/photopea-home-banner-road-crew.jpg");
+    background-size: cover;
+    background-position: left center;
+  }
 }
 
 .page-hero--grid {
@@ -1760,45 +1845,13 @@ button.service-item-modal:focus-visible {
   }
 }
 
-.page-hero-bg--about {
-  top: var(--banner-frame-size);
-  bottom: var(--banner-frame-size);
-  height: calc(100% - (2 * var(--banner-frame-size)));
-  object-fit: cover;
-  object-position: 48% bottom;
-}
-
 .page-hero-bg--services,
 .page-hero-bg--brushing {
   object-position: 74% 50%;
 }
 
-/* Services page banner — locked sizing */
-.page-hero:has(> img[src$="banner-services.jpg"]) .page-hero-bg {
-  inset: 0;
-  height: 100%;
-  object-fit: cover;
-  object-position: 74% 50%;
-}
-
-.page-hero-bg--quote {
-  object-position: 52% 65%;
-}
-
 .page-hero-bg--pruning {
   object-position: 85% center;
-}
-
-.page-hero-bg--gallery {
-  object-position: 72% center;
-}
-
-/* Gallery page banner — LOCKED. See design-reference.md. Do not change without user approval. */
-.page-hero:has(> img[src$="photopea-banner-chainsaw.jpg"]) .page-hero-bg {
-  inset: 0;
-  height: 100%;
-  object-fit: cover;
-  object-position: 72% center;
 }
 
 .page-hero-bg--chips {
@@ -2821,6 +2874,7 @@ button.gallery-card:focus-visible {
 
   .site-logo {
     height: 3.25rem;
+    width: calc(3.25rem * 250 / 85);
   }
 
   .site-header-grid {
