@@ -114,6 +114,8 @@ Do not change:
 * Text content unless asked
 * Images unless asked
 * Colours unless asked
+* Section backgrounds unless asked
+* Gradients, tints, or overlays unless asked
 * Fonts unless asked
 * Layout widths unless asked
 * Header unless asked
@@ -122,6 +124,12 @@ Do not change:
 * Mobile layout unless asked
 * File names unless asked
 * Folder structure unless asked
+
+When asked to style one section only (banner, hero, intro, etc.):
+
+* Change only that section’s CSS selector or HTML class.
+* Do not extend the same background, gradient, or tint to adjacent sections or the page body.
+* Example: a green gradient on a contact banner must stay on the banner — not spill into the main content area below.
 
 ## Visual Work Rules
 

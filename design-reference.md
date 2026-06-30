@@ -360,6 +360,19 @@ Scoped in CSS via `.page-hero:has(> img[src$="photopea-banner-chainsaw.jpg"])`.
 
 ---
 
+## Contact page main — locked
+
+**Contact page only (`contact.html`). Do not change without approval.**
+
+| Property | Value |
+|----------|-------|
+| Section | `.section-py-contact-main` |
+| Background | `#ffffff` (white only — no cream, gradient, or green tint) |
+
+Do not extend `.contact-page-intro` banner styling to this section.
+
+---
+
 ## Contact page column layout
 
 | Property | Value |
